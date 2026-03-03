@@ -78,11 +78,11 @@ export default function Home() {
             <div className="order-2 lg:order-1">
               <h2 className="text-primary font-bold tracking-wider uppercase text-sm mb-2">Nuestra Historia</h2>
               <h3 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
-                De <span className="text-slate-400 decoration-slate-400 line-through decoration-2">Control Integral MM</span> a <span className="text-primary">CIS CONTROL</span>
+                La Evolución hacia <span className="text-primary">CIS CONTROL</span>
               </h3>
               <div className="w-20 h-1 bg-primary rounded-full mb-8"></div>
               <p className="text-lg text-slate-600 mb-6 leading-relaxed">
-                Durante dos décadas, Control Integral MM estableció el estándar de confiabilidad industrial. Hoy, evolucionamos a <strong>CIS CONTROL</strong>, llevando adelante más de 20 años de maestría técnica mientras abrazamos el futuro de la automatización y la integración digital.
+                Durante dos décadas, hemos establecido el estándar de confiabilidad industrial. Hoy, como <strong>CIS CONTROL</strong>, llevamos adelante más de 20 años de maestría técnica mientras abrazamos el futuro de la automatización y la integración digital.
               </p>
               <p className="text-lg text-slate-600 mb-8 leading-relaxed">
                 Nuestra nueva identidad refleja un enfoque más nítido, capacidades más amplias y un compromiso inquebrantable con la excelencia en ingeniería. Los mismos expertos, una nueva visión.

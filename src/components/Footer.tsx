@@ -42,7 +42,7 @@ export default function Footer() {
           <div>
             <h4 className="text-white font-bold uppercase text-sm tracking-wider mb-6">Contacto</h4>
             <div className="mb-6">
-              <Logo theme="light" showText={false} className="h-12 w-12" />
+              <Logo theme="light" />
             </div>
             <ul className="space-y-3 text-sm">
               <li className="flex items-start gap-3">
