@@ -47,11 +47,11 @@ export default function Footer() {
             <ul className="space-y-3 text-sm">
               <li className="flex items-start gap-3">
                 <span className="material-icons text-primary text-base mt-0.5">location_on</span>
-                <span>Zona Industrial 4<br />Ciudad de México, México</span>
+                <span>Zona Industrial<br />Valencia, Venezuela</span>
               </li>
               <li className="flex items-center gap-3">
                 <span className="material-icons text-primary text-base">phone</span>
-                <span>+52 (55) 1234-5678</span>
+                <span>+58 (212) 123-4567</span>
               </li>
               <li className="flex items-center gap-3">
                 <span className="material-icons text-primary text-base">mail</span>

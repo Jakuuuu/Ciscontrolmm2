@@ -32,7 +32,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h3 className="font-bold text-slate-900">Sede Central</h3>
-                    <p className="text-slate-600">Zona Industrial 4, Ciudad de México, México</p>
+                    <p className="text-slate-600">Zona Industrial, Valencia, Venezuela</p>
                   </div>
                 </div>
 
@@ -42,7 +42,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h3 className="font-bold text-slate-900">Teléfono</h3>
-                    <p className="text-slate-600">+52 (55) 1234-5678</p>
+                    <p className="text-slate-600">+58 (212) 123-4567</p>
                     <p className="text-slate-500 text-sm">Lun-Vie, 9am - 6pm CST</p>
                   </div>
                 </div>

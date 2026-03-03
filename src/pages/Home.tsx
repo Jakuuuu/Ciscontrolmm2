@@ -228,8 +228,8 @@ export default function Home() {
             </p>
             {/* Logos row placeholder */}
             <div className="flex flex-wrap justify-center gap-8 opacity-70 grayscale">
-              <span className="font-bold text-2xl text-white tracking-widest">PEMEX</span>
-              <span className="font-bold text-2xl text-white tracking-widest">CFE</span>
+              <span className="font-bold text-2xl text-white tracking-widest">PDVSA</span>
+              <span className="font-bold text-2xl text-white tracking-widest">CORPOELEC</span>
               <span className="font-bold text-2xl text-white tracking-widest">SIEMENS</span>
               <span className="font-bold text-2xl text-white tracking-widest">SCHNEIDER</span>
             </div>

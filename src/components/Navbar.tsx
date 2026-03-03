@@ -23,9 +23,9 @@ export default function Navbar() {
 
   const navLinks = [
     { name: 'Inicio', path: '/' },
+    { name: 'Nosotros', path: '/about' },
     { name: 'Servicios', path: '/services' },
     { name: 'Proyectos', path: '/projects' },
-    { name: 'Nosotros', path: '/about' },
   ];
 
   const isActive = (path: string) => location.pathname === path;

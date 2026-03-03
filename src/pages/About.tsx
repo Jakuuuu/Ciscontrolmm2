@@ -43,7 +43,7 @@ export default function About() {
               </div>
               <h2 className="text-2xl font-bold text-slate-900 mb-4">Nuestra Misión</h2>
               <p className="text-slate-600 leading-relaxed">
-                Proporcionar soluciones de ingeniería de clase mundial que mejoren la seguridad, eficiencia y sostenibilidad de la infraestructura industrial de México a través de la innovación y la maestría técnica.
+                Proporcionar soluciones de ingeniería de clase mundial que mejoren la seguridad, eficiencia y sostenibilidad de la infraestructura industrial de Venezuela a través de la innovación y la maestría técnica.
               </p>
             </div>
             <div className="bg-background-light p-10 rounded-2xl border border-slate-100">
@@ -92,7 +92,7 @@ export default function About() {
               <div className="md:text-right mb-4 md:mb-0">
                 <span className="text-primary font-bold text-xl">2018</span>
                 <h3 className="text-lg font-bold text-slate-900">Contratos Mayores</h3>
-                <p className="text-slate-600 text-sm">Aseguramiento de alianzas clave con PEMEX y CFE para proyectos de infraestructura a gran escala.</p>
+                <p className="text-slate-600 text-sm">Aseguramiento de alianzas clave con PDVSA y CORPOELEC para proyectos de infraestructura a gran escala.</p>
               </div>
               <div className="absolute left-[-9px] md:left-1/2 md:-ml-[9px] w-4 h-4 rounded-full bg-slate-300 border-4 border-white shadow-sm"></div>
               <div className="hidden md:block"></div>
