@@ -53,8 +53,8 @@ export default function Contact() {
                   </div>
                   <div>
                     <h3 className="font-bold text-slate-900">Correo Electrónico</h3>
-                    <p className="text-slate-600">contact@cis-engineering.com</p>
-                    <p className="text-slate-600">sales@cis-engineering.com</p>
+                    <p className="text-slate-600">contact@cis-control.com</p>
+                    <p className="text-slate-600">sales@cis-control.com</p>
                   </div>
                 </div>
               </div>

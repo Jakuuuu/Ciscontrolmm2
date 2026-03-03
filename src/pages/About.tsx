@@ -17,7 +17,7 @@ export default function About() {
                 <span className="text-primary font-bold tracking-wider uppercase text-sm mb-2 block">Nuestra Historia</span>
                 <h1 className="text-4xl md:text-5xl font-bold mb-6">Construyendo sobre un Legado de Excelencia</h1>
                 <p className="text-xl text-slate-300 font-light leading-relaxed mb-8">
-                  CIS Engineering representa la evolución de Control Integral MM. Llevamos adelante décadas de experiencia mientras abrazamos el futuro de la tecnología industrial.
+                  CIS CONTROL representa la evolución de Control Integral MM. Llevamos adelante décadas de experiencia mientras abrazamos el futuro de la tecnología industrial.
                 </p>
               </motion.div>
             </div>
@@ -104,8 +104,8 @@ export default function About() {
               <div className="absolute left-[-9px] md:left-1/2 md:-ml-[9px] w-4 h-4 rounded-full bg-primary border-4 border-white shadow-sm animate-pulse"></div>
               <div className="mb-4 md:mb-0">
                 <span className="text-primary font-bold text-xl">2023</span>
-                <h3 className="text-lg font-bold text-slate-900">Rebranding a CIS</h3>
-                <p className="text-slate-600 text-sm">Evolución a CIS Engineering, lanzando una nueva era de servicios de transformación digital.</p>
+                <h3 className="text-lg font-bold text-slate-900">Rebranding a CIS CONTROL</h3>
+                <p className="text-slate-600 text-sm">Evolución a CIS CONTROL, lanzando una nueva era de servicios de transformación digital.</p>
               </div>
             </div>
           </div>
