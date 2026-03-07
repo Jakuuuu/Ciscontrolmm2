@@ -39,22 +39,22 @@ export default function Navbar() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-20 items-center">
+        <div className="flex justify-between h-16 items-center">
           {/* Logo */}
-          <Link to="/" className="flex-shrink-0 flex items-center gap-3 group">
-            <Logo theme="dark" />
+          <Link to="/" className="flex-shrink-0 flex items-center gap-2 group">
+            <Logo theme="dark" className="scale-90 origin-left" />
           </Link>
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex space-x-8 items-center">
+          <div className="hidden md:flex space-x-6 items-center">
             {navLinks.map((link) => (
               <Link
                 key={link.path}
                 to={link.path}
-                className={`text-sm font-medium transition-colors uppercase tracking-wide ${
+                className={`text-[11px] font-bold transition-colors uppercase tracking-[0.15em] ${
                   isActive(link.path)
-                    ? 'text-primary font-bold'
-                    : 'text-slate-600 hover:text-primary'
+                    ? 'text-primary'
+                    : 'text-slate-500 hover:text-primary'
                 }`}
               >
                 {link.name}
@@ -62,7 +62,7 @@ export default function Navbar() {
             ))}
             <Link
               to="/contact"
-              className="bg-primary hover:bg-primary-dark text-white px-5 py-2.5 rounded-lg text-sm font-semibold transition-all shadow-lg shadow-primary/20 hover:shadow-primary/30 hover:-translate-y-0.5"
+              className="bg-primary hover:bg-primary-dark text-white px-4 py-2 rounded-lg text-xs font-bold transition-all shadow-md shadow-primary/10 hover:shadow-primary/20 hover:-translate-y-0.5"
             >
               Contáctanos
             </Link>
