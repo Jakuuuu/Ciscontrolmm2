@@ -1,113 +1,123 @@
 import { motion } from 'motion/react';
+import { Target, Eye, ShieldCheck, Cpu, Lightbulb, PenTool, Users, Award } from 'lucide-react';
+import workspaceImg from '../assets/about_workspace.png';
 
 export default function About() {
+  const values = [
+    { icon: <Lightbulb className="w-5 h-5" />, title: 'Innovación', desc: 'Buscamos siempre la tecnología más avanzada para resolver problemas antiguos.' },
+    { icon: <ShieldCheck className="w-5 h-5" />, title: 'Integridad', desc: 'Actuamos con honestidad y ética inquebrantable en cada contrato.' },
+    { icon: <Award className="w-5 h-5" />, title: 'Excelencia', desc: 'Calidad superior certificada en cada entrega y diseño técnico.' },
+    { icon: <Users className="w-5 h-5" />, title: 'Compromiso', desc: 'Dedicados al éxito a largo plazo de nuestros socios industriales.' }
+  ];
+
   return (
-    <div className="pt-20">
-      {/* Hero */}
-      <section className="bg-background-dark text-white py-24 relative overflow-hidden">
-        <div className="absolute inset-0 bg-industrial-gradient opacity-90"></div>
+    <div className="bg-background-dark min-h-screen">
+      {/* Premium Hero */}
+      <section className="relative pt-40 pb-32 overflow-hidden border-b border-white/5">
+        <div className="absolute inset-0 industrial-grid opacity-20"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <motion.div 
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
-              >
-                <span className="text-primary font-bold tracking-wider uppercase text-sm mb-2 block">Nuestra Historia</span>
-                <h1 className="text-4xl md:text-5xl font-bold mb-6">Construyendo sobre un Legado de Excelencia</h1>
-                <p className="text-xl text-slate-300 font-light leading-relaxed mb-8">
-                  CIS CONTROL representa la evolución de Control Integral MM. Llevamos adelante décadas de experiencia mientras abrazamos el futuro de la tecnología industrial.
-                </p>
-              </motion.div>
-            </div>
-            <div className="relative">
-              <div className="absolute -inset-4 bg-primary/20 rounded-full blur-3xl"></div>
-              <img 
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzMO_EDuCSfSVPTyEKZSo1CwAug-cS7EBb97iWGQ-mk8Rt88EKh3aYSsrEJFvOazUzzqrbB0l2KmEpeGTXCeHxB0BVvIPtpHPk1aZWvlly8koPQQswzXYcYvvlLuvAl0dTh-YM4m7k4cqZfCjB6mmWtU6cW-dywaYDrZHOyrlJQHak6S5pyjJAONZ-GyvhgiV9Thb00c97lVWRPhTKJL32HYEmtRYAX1nabJytSe-J_5iohXieFpp455kIChJPf627Lm68sqIqFO4" 
-                alt="Engineering Team" 
-                className="relative rounded-2xl shadow-2xl border border-white/10"
+          <div className="grid lg:grid-cols-2 gap-20 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <span className="text-[10px] font-bold tracking-[0.5em] uppercase text-primary mb-6 block">Nuestra Trayectoria</span>
+              <h1 className="text-6xl md:text-8xl font-black text-white tracking-tighter leading-none mb-8">
+                Legado de <br /> <span className="text-slate-500">Precisión</span>
+              </h1>
+              <p className="text-xl text-slate-400 leading-relaxed mb-10 max-w-xl">
+                CIS CONTROL representa la evolución de Control Integral MM. Llevamos adelante décadas de maestría técnica mientras definimos el futuro de la ingeniería industrial.
+              </p>
+              <div className="flex items-center gap-6">
+                <div className="flex flex-col">
+                  <span className="text-3xl font-bold text-white tracking-tight">20+</span>
+                  <span className="text-[10px] uppercase tracking-widest text-primary font-bold">Años Activos</span>
+                </div>
+                <div className="w-[1px] h-10 bg-white/10"></div>
+                <div className="flex flex-col">
+                  <span className="text-3xl font-bold text-white tracking-tight">100%</span>
+                  <span className="text-[10px] uppercase tracking-widest text-primary font-bold">Capacidad Propia</span>
+                </div>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 1 }}
+              className="relative p-2 bg-gradient-to-br from-primary/30 to-transparent shadow-2xl"
+            >
+              <img
+                src={workspaceImg}
+                alt="Workspace"
+                className="w-full h-auto grayscale hover:grayscale-0 transition-all duration-700"
               />
-            </div>
+              <div className="absolute -bottom-10 -left-10 w-40 h-40 border border-white/5 -z-10 bg-industrial-grid"></div>
+            </motion.div>
           </div>
         </div>
       </section>
 
-      {/* Mission / Vision */}
-      <section className="py-20 bg-white">
+      {/* Mission & Vision - Industrial Cards */}
+      <section className="py-32 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 gap-12">
-            <div className="bg-background-light p-10 rounded-2xl border border-slate-100">
-              <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center text-primary mb-6">
-                <span className="material-icons text-3xl">flag</span>
+          <div className="grid md:grid-cols-2 gap-8">
+            <motion.div
+              whileHover={{ y: -5 }}
+              className="p-12 bg-white/5 border border-white/10 relative group"
+            >
+              <div className="absolute top-0 right-0 p-6 opacity-10 group-hover:opacity-20 transition-opacity">
+                <Target size={120} className="text-white" />
               </div>
-              <h2 className="text-2xl font-bold text-slate-900 mb-4">Nuestra Misión</h2>
-              <p className="text-slate-600 leading-relaxed">
-                Proporcionar soluciones de ingeniería de clase mundial que mejoren la seguridad, eficiencia y sostenibilidad de la infraestructura industrial de Venezuela a través de la innovación y la maestría técnica.
+              <span className="text-[10px] font-bold tracking-[0.4em] uppercase text-primary mb-4 block">Propósito</span>
+              <h2 className="text-4xl font-black text-white mb-6 uppercase tracking-tighter">Misión</h2>
+              <p className="text-slate-400 leading-relaxed text-lg border-l-2 border-primary pl-8">
+                Proporcionar soluciones de ingeniería de clase mundial que maximicen la seguridad y eficiencia de la infraestructura industrial a través de innovación constante.
               </p>
-            </div>
-            <div className="bg-background-light p-10 rounded-2xl border border-slate-100">
-              <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center text-primary mb-6">
-                <span className="material-icons text-3xl">visibility</span>
+            </motion.div>
+
+            <motion.div
+              whileHover={{ y: -5 }}
+              className="p-12 bg-white/5 border border-white/10 relative group"
+            >
+              <div className="absolute top-0 right-0 p-6 opacity-10 group-hover:opacity-20 transition-opacity">
+                <Eye size={120} className="text-white" />
               </div>
-              <h2 className="text-2xl font-bold text-slate-900 mb-4">Nuestra Visión</h2>
-              <p className="text-slate-600 leading-relaxed">
-                Ser el líder indiscutible en automatización industrial e ingeniería eléctrica en la región, reconocidos por nuestra capacidad para resolver los desafíos técnicos más complejos.
+              <span className="text-[10px] font-bold tracking-[0.4em] uppercase text-primary mb-4 block">Destino</span>
+              <h2 className="text-4xl font-black text-white mb-6 uppercase tracking-tighter">Visión</h2>
+              <p className="text-slate-400 leading-relaxed text-lg border-l-2 border-primary pl-8">
+                Ser el referente absoluto en automatización e ingeniería eléctrica crítica en la región, reconocidos por resolver lo que otros consideran imposible.
               </p>
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>
 
-      {/* Timeline */}
-      <section className="py-20 bg-background-light">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-center text-slate-900 mb-16">Nuestra Trayectoria</h2>
-          
-          <div className="relative border-l-2 border-slate-200 ml-6 md:ml-0 space-y-12">
-            {/* Item 1 */}
-            <div className="relative md:grid md:grid-cols-2 md:gap-12 items-center">
-              <div className="md:text-right mb-4 md:mb-0">
-                <span className="text-primary font-bold text-xl">2003</span>
-                <h3 className="text-lg font-bold text-slate-900">Fundación</h3>
-                <p className="text-slate-600 text-sm">Se establece Control Integral MM, enfocándose en proyectos locales de automatización.</p>
-              </div>
-              <div className="absolute left-[-9px] md:left-1/2 md:-ml-[9px] w-4 h-4 rounded-full bg-primary border-4 border-white shadow-sm"></div>
-              <div className="hidden md:block"></div>
+      {/* Values Grid */}
+      <section className="py-32 border-t border-white/5">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
+            <div className="max-w-xl">
+              <span className="text-[10px] font-bold tracking-[0.5em] uppercase text-primary mb-4 block">Nuestro ADN</span>
+              <h2 className="text-5xl font-black text-white tracking-tighter leading-none">Valores <span className="text-slate-500">Fundamentales</span></h2>
             </div>
+          </div>
 
-            {/* Item 2 */}
-            <div className="relative md:grid md:grid-cols-2 md:gap-12 items-center">
-              <div className="hidden md:block"></div>
-              <div className="absolute left-[-9px] md:left-1/2 md:-ml-[9px] w-4 h-4 rounded-full bg-slate-300 border-4 border-white shadow-sm"></div>
-              <div className="mb-4 md:mb-0">
-                <span className="text-primary font-bold text-xl">2010</span>
-                <h3 className="text-lg font-bold text-slate-900">Expansión</h3>
-                <p className="text-slate-600 text-sm">Ampliación de servicios para incluir instalaciones eléctricas de alta tensión y mantenimiento.</p>
-              </div>
-            </div>
-
-            {/* Item 3 */}
-            <div className="relative md:grid md:grid-cols-2 md:gap-12 items-center">
-              <div className="md:text-right mb-4 md:mb-0">
-                <span className="text-primary font-bold text-xl">2018</span>
-                <h3 className="text-lg font-bold text-slate-900">Contratos Mayores</h3>
-                <p className="text-slate-600 text-sm">Aseguramiento de alianzas clave con PDVSA y CORPOELEC para proyectos de infraestructura a gran escala.</p>
-              </div>
-              <div className="absolute left-[-9px] md:left-1/2 md:-ml-[9px] w-4 h-4 rounded-full bg-slate-300 border-4 border-white shadow-sm"></div>
-              <div className="hidden md:block"></div>
-            </div>
-
-            {/* Item 4 */}
-            <div className="relative md:grid md:grid-cols-2 md:gap-12 items-center">
-              <div className="hidden md:block"></div>
-              <div className="absolute left-[-9px] md:left-1/2 md:-ml-[9px] w-4 h-4 rounded-full bg-primary border-4 border-white shadow-sm animate-pulse"></div>
-              <div className="mb-4 md:mb-0">
-                <span className="text-primary font-bold text-xl">2023</span>
-                <h3 className="text-lg font-bold text-slate-900">Rebranding a CIS CONTROL</h3>
-                <p className="text-slate-600 text-sm">Evolución a CIS CONTROL, lanzando una nueva era de servicios de transformación digital.</p>
-              </div>
-            </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-1">
+            {values.map((v, idx) => (
+              <motion.div
+                key={v.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: idx * 0.1 }}
+                className="p-10 bg-white/5 border border-white/10 hover:bg-primary/10 transition-colors group"
+              >
+                <div className="text-primary mb-6 group-hover:scale-110 transition-transform">{v.icon}</div>
+                <h3 className="text-xl font-bold text-white mb-4 tracking-tight">{v.title}</h3>
+                <p className="text-sm text-slate-500 leading-relaxed">{v.desc}</p>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>

@@ -1,152 +1,185 @@
 import { motion } from 'motion/react';
+import { Settings, Zap, Shield, Network, CheckCircle2, ArrowRight } from 'lucide-react';
+import autoImg from '../assets/service_automation.png';
+import elecImg from '../assets/service_electricity.png';
+import telecomImg from '../assets/service_telecom.png';
+import safetyImg from '../assets/service_safety.png';
 
 export default function Services() {
   const services = [
     {
       id: 'automation',
       title: 'Automatización Industrial',
-      icon: 'settings_input_component',
-      description: 'Diseñamos e implementamos sistemas de control robustos para optimizar sus procesos de producción.',
+      icon: <Settings className="w-6 h-6" />,
+      description: 'Diseñamos e implementamos sistemas de control robustos para optimizar sus procesos de producción a través de tecnologías inteligentes.',
       features: [
         'Programación de PLC (Siemens, Allen Bradley)',
-        'Desarrollo de SCADA y HMI',
-        'Lazos de Control de Procesos',
+        'Desarrollo de SCADA y HMI personalizados',
+        'Optimización de Lazos de Control',
         'Integración de Robótica Industrial',
-        'Soluciones IoT e Industria 4.0'
+        'Industria 4.0 y Analítica de Datos'
       ],
-      image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCNW4og58ZSYjCytfhCNP6Sg3mRwoRTfkCzr-yIXyifQKw3P0Diujd4lUySgwKBfegmpgMLFQptraSZlUb6lix8df9X1eH_YsaOp_bPZXt-MiTRZ7q9fFfBv8nwtVJ_Y8pHz3HTa8CT2E4BVwLUIs_37XFdglrYzt2V80nZMsF9A5WvMlSp78W5dYBzkaqXpAZOEHp5B6uGZ7HGqNW3siocTEMpu8sZhto2t64AcIVqk9INLqNzZ3xDBWMQWDLShIkRg64O3Vo5XdI'
+      image: autoImg,
+      color: 'border-blue-500/20'
     },
     {
       id: 'electricity',
       title: 'Ingeniería Eléctrica',
-      icon: 'bolt',
-      description: 'Soluciones eléctricas integrales desde subestaciones de alta tensión hasta distribución de baja tensión.',
+      icon: <Zap className="w-6 h-6" />,
+      description: 'Soluciones eléctricas integrales que garantizan la estabilidad y eficiencia energética de su infraestructura industrial.',
       features: [
         'Subestaciones de Alta y Media Tensión',
-        'Unidades de Distribución de Energía (PDU)',
+        'Unidades de Distribución Crítica (PDU)',
         'Centros de Control de Motores (CCM)',
-        'Sistemas de Iluminación y Eficiencia Energética',
-        'Auditorías de Seguridad Eléctrica (ARC Flash)'
+        'Sistemas de Iluminación de Alta Eficiencia',
+        'Análisis de Calidad de Energía'
       ],
-      image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCjbLxuIPGeVfREcIqQTj5eeZ-snz7eqsZwlYALzIOMAHVJ83DPbPn9DLAHYh2ITqIJ6EJoCjwc2dgkRupUnr6BccEUaPFrVkICt2LhykAZ1px7Sla0QqYMDAuvMhzDcom3VtLYsl14D23xwKje-u9e7yxicJ3PTSVf9qD8_MY7QrCDV-2uE5nli_VrWXTzdhhIFSogO-Rpl0Wir1W3vhB0hKfujdfLyE7h0WMcD33dUhBXnkZytIvXJpOm-dNpE39Vica9pYnPc8k'
-    },
-    {
-      id: 'safety',
-      title: 'Protección de Activos y Seguridad',
-      icon: 'shield',
-      description: 'Protegiendo sus activos más valiosos con sistemas avanzados de detección y supresión.',
-      features: [
-        'Sistemas de Detección y Alarma de Incendios',
-        'Sistemas de Detección de Gas',
-        'Control de Acceso y CCTV',
-        'Sistemas de Parada de Emergencia (ESD)',
-        'Ciberseguridad para Sistemas de Control Industrial'
-      ],
-      image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuD0D72fWmh2gw74fo9fPsK5m_xyMybUt8R3QvRCrct-AbwrbE7htY1knkKJhiM9gj6FxSJr8LAGrIZVDcvVZ_fb1nF7pkR9qLHAOnerptFLg6FaYyisFcZzpbRkjfBqqsGRP3SV9eRFXZ4Ze24B3q5KFjGzHExWP2Xlz5bXwt2GwvQvTLlt_9GYqUj2bctm30zte9VLN0Fi7xavOUumasaGOWMrrC1XeDRTl7VcFTMcILSthlmpYawTZWLyQgMXKV6qIBYgOqprBQU'
+      image: elecImg,
+      color: 'border-yellow-500/20'
     },
     {
       id: 'telecom',
-      title: 'Telecomunicaciones',
-      icon: 'router',
-      description: 'Construyendo la columna vertebral de su infraestructura digital con conectividad de alta velocidad.',
+      title: 'Comunicaciones Críticas',
+      icon: <Network className="w-6 h-6" />,
+      description: 'Construimos la columna vertebral digital de su industria con redes de alta velocidad y máxima fiabilidad.',
       features: [
-        'Redes de Fibra Óptica (OSP/ISP)',
-        'Cableado Estructurado (Cat 6A, 7)',
-        'Redes Inalámbricas Industriales',
-        'Infraestructura de Centros de Datos',
-        'VoIP y Comunicaciones Unificadas'
+        'Despliegue de Fibra Óptica (OSP/ISP)',
+        'Arquitecturas de Red Industrial',
+        'Radioenlaces de Microondas',
+        'Infraestructura para Data Centers',
+        'Sistemas de Telefonía VoIP Industrial'
       ],
-      image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBUkDwJ-WTl0Wnw_oI0DcKcOkHoZFPQLc0FccMfwt2Oav6u_VOqgj89_9ZBzATBhYOk3v3hoMJy2FmUjsXkKcE97d6A7zPwIriUWYibi3_zxfU2fSB90amlZWH1OFTSdQc2PXoeeq38mbk91b_wyzfXHGMYR17Flazd2QpT4drglwNbs8bZXz6repDkGmm0wkOpC7B5eSbl-DZduDDF_6Mkrduc7vtfwmUvicegXffX9JPqG8vbTZgG2HEfkypb3xjJI--8FxfeL1k'
+      image: telecomImg,
+      color: 'border-cyan-500/20'
+    },
+    {
+      id: 'safety',
+      title: 'Protección y Seguridad',
+      icon: <Shield className="w-6 h-6" />,
+      description: 'Protegiendo sus activos más valiosos y al personal mediante sistemas avanzados de detección y supresión.',
+      features: [
+        'Detección y Alarma contra Incendios',
+        'Sistemas de Detección de Gases/Tóxicos',
+        'Control de Acceso y Gestión de Video',
+        'Sistemas de Parada de Emergencia (ESD)',
+        'Sistemas Instrumentados de Seguridad (SIS)'
+      ],
+      image: safetyImg,
+      color: 'border-red-500/20'
     }
   ];
 
   return (
-    <div className="pt-20">
-      {/* Hero */}
-      <section className="bg-background-dark text-white py-20 relative overflow-hidden">
-        <div className="absolute inset-0 bg-industrial-gradient opacity-90"></div>
-        <div className="absolute inset-0 grid-bg opacity-20"></div>
+    <div className="bg-background-dark min-h-screen">
+      {/* Premium Hero */}
+      <section className="relative pt-40 pb-32 overflow-hidden">
+        <div className="absolute inset-0 industrial-grid opacity-20"></div>
+        <div className="absolute top-0 right-0 w-1/2 h-full bg-primary/5 blur-[120px] rounded-full"></div>
+
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center max-w-3xl mx-auto"
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            className="max-w-4xl"
           >
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">Servicios de Ingeniería Especializada</h1>
-            <p className="text-xl text-slate-300 font-light">
-              Entregando precisión, confiabilidad e innovación en cada proyecto.
+            <span className="text-[10px] font-bold tracking-[0.5em] uppercase text-primary mb-6 block">Nuestras Soluciones</span>
+            <h1 className="text-6xl md:text-8xl font-black text-white tracking-tighter leading-none mb-8">
+              Ingeniería de <br /> <span className="text-slate-500">Alto Rendimiento</span>
+            </h1>
+            <p className="text-xl text-slate-400 max-w-2xl leading-relaxed">
+              Transformamos desafíos industriales complejos en sistemas eficientes, seguros y tecnológicamente avanzados.
             </p>
           </motion.div>
         </div>
       </section>
 
-      {/* Services List */}
-      <section className="py-20 bg-background-light">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-24">
-          {services.map((service, index) => (
-            <motion.div 
-              key={service.id}
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.6 }}
-              className={`flex flex-col ${index % 2 === 1 ? 'lg:flex-row-reverse' : 'lg:flex-row'} gap-12 items-center`}
-            >
-              {/* Image Side */}
-              <div className="w-full lg:w-1/2">
-                <div className="relative rounded-2xl overflow-hidden shadow-2xl group">
-                  <div className="absolute inset-0 bg-primary/20 group-hover:bg-transparent transition-colors duration-500 z-10"></div>
-                  <img 
-                    src={service.image} 
-                    alt={service.title} 
-                    className="w-full h-[400px] object-cover transform group-hover:scale-105 transition-transform duration-700"
-                  />
-                  <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 to-transparent z-20">
-                    <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center text-white mb-2">
-                      <span className="material-icons text-2xl">{service.icon}</span>
+      {/* Services List - Premium Grid */}
+      <section className="pb-32">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="space-y-40">
+            {services.map((service, index) => (
+              <motion.div
+                key={service.id}
+                id={service.id}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.8 }}
+                className={`flex flex-col ${index % 2 === 1 ? 'lg:flex-row-reverse' : 'lg:flex-row'} gap-16 items-center`}
+              >
+                {/* Visual Side */}
+                <div className="w-full lg:w-3/5">
+                  <div className={`relative p-1 bg-gradient-to-br ${index % 2 === 0 ? 'from-primary/20 to-transparent' : 'from-transparent to-primary/20'}`}>
+                    <div className="relative aspect-[16/9] overflow-hidden">
+                      <img
+                        src={service.image}
+                        alt={service.title}
+                        className="w-full h-full object-cover transition-transform duration-1000 hover:scale-105"
+                      />
+                      <div className="absolute inset-0 bg-slate-900/20"></div>
                     </div>
+                    {/* Decorative element */}
+                    <div className={`absolute -bottom-6 ${index % 2 === 0 ? '-right-6' : '-left-6'} w-32 h-32 border border-white/5 -z-10`}></div>
                   </div>
                 </div>
-              </div>
 
-              {/* Content Side */}
-              <div className="w-full lg:w-1/2">
-                <h2 className="text-3xl font-bold text-slate-900 mb-4 flex items-center gap-3">
-                  {service.title}
-                </h2>
-                <div className="h-1 w-20 bg-primary mb-6"></div>
-                <p className="text-lg text-slate-600 mb-8 leading-relaxed">
-                  {service.description}
-                </p>
-                
-                <div className="bg-white rounded-xl p-6 shadow-sm border border-slate-100">
-                  <h3 className="text-sm font-bold text-slate-400 uppercase tracking-wider mb-4">Capacidades Clave</h3>
-                  <ul className="space-y-3">
+                {/* Content Side */}
+                <div className="w-full lg:w-2/5">
+                  <div className="flex items-center gap-4 mb-6">
+                    <div className="w-12 h-12 bg-white/5 border border-white/10 flex items-center justify-center text-primary">
+                      {service.icon}
+                    </div>
+                    <div className="h-[1px] flex-grow bg-white/10"></div>
+                  </div>
+
+                  <h2 className="text-4xl font-bold text-white mb-6 tracking-tight">
+                    {service.title}
+                  </h2>
+
+                  <p className="text-lg text-slate-400 mb-10 leading-relaxed italic border-l-2 border-primary pl-6">
+                    {service.description}
+                  </p>
+
+                  <div className="grid grid-cols-1 gap-4">
                     {service.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-start gap-3 text-slate-700">
-                        <span className="material-icons text-primary text-sm mt-1">check_circle</span>
-                        <span>{feature}</span>
-                      </li>
+                      <div key={idx} className="flex items-center gap-3 text-slate-300 group">
+                        <CheckCircle2 className="w-4 h-4 text-primary opacity-50 group-hover:opacity-100 transition-opacity" />
+                        <span className="text-sm font-medium tracking-wide">{feature}</span>
+                      </div>
                     ))}
-                  </ul>
+                  </div>
+
+                  <motion.button
+                    whileHover={{ x: 10 }}
+                    className="mt-12 flex items-center gap-3 text-white text-xs font-bold tracking-[0.2em] uppercase group"
+                  >
+                    Solicitar Información Técnica
+                    <ArrowRight className="w-4 h-4 text-primary" />
+                  </motion.button>
                 </div>
-              </div>
-            </motion.div>
-          ))}
+              </motion.div>
+            ))}
+          </div>
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-20 bg-primary text-white text-center">
-        <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-6">¿Necesita una solución personalizada?</h2>
-          <p className="text-xl text-blue-100 mb-8">
-            Nuestro equipo de ingeniería está listo para abordar sus desafíos más complejos.
+      {/* Premium CTA */}
+      <section className="py-32 relative overflow-hidden">
+        <div className="absolute inset-0 bg-primary"></div>
+        <div className="absolute inset-0 industrial-grid opacity-20"></div>
+        <div className="max-w-5xl mx-auto px-4 relative z-10 text-center">
+          <h2 className="text-4xl md:text-6xl font-black text-white mb-8 tracking-tighter">
+            Hablemos de su Próximo Desafío
+          </h2>
+          <p className="text-xl text-white/80 mb-12 max-w-2xl mx-auto">
+            Nuestros ingenieros están listos para diseñar la solución que su proyecto necesita.
           </p>
-          <a href="/contact" className="inline-block bg-white text-primary px-8 py-4 rounded-lg font-bold hover:bg-blue-50 transition-colors shadow-lg">
-            Consultar con un Ingeniero
-          </a>
+          <div className="flex flex-col sm:flex-row justify-center gap-6">
+            <a href="/contact" className="px-12 py-5 bg-white text-primary font-bold uppercase tracking-widest hover:bg-slate-900 hover:text-white transition-all shadow-2xl">
+              Consultar con un Experto
+            </a>
+          </div>
         </div>
       </section>
     </div>

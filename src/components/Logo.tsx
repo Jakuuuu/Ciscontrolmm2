@@ -1,4 +1,5 @@
 import React from 'react';
+import logoImg from '../assets/logo.png';
 
 interface LogoProps {
   className?: string;
@@ -6,15 +7,14 @@ interface LogoProps {
 }
 
 export const Logo: React.FC<LogoProps> = ({ className = "", theme = "dark" }) => {
-  // Theme determines the color of the "CIS" text. 
-  // "CONTROL" is always the brand red #C8102E.
-  const baseColor = theme === "light" ? "text-white" : "text-slate-900";
-  
   return (
-    <div className={`flex items-baseline leading-none select-none ${className}`}>
-      <span className={`font-extrabold text-2xl tracking-tight ${baseColor}`}>CIS-</span>
-      <span className="font-extrabold text-2xl tracking-tight text-[#C8102E]">CONTROL</span>
-      <span className={`font-semibold text-lg ml-0.5 ${baseColor}`}>c.a.</span>
+    <div className={`flex items-center select-none ${className}`}>
+      <img
+        src={logoImg}
+        alt="CIS-CONTROL"
+        className={`h-14 w-auto object-contain transition-all duration-300 ${theme === 'light' ? 'brightness-0 invert' : ''
+          }`}
+      />
     </div>
   );
 };

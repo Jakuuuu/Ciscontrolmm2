@@ -30,49 +30,63 @@ export default function Navbar() {
 
   const isActive = (path: string) => location.pathname === path;
 
-  return (
-    <nav 
-      className={`fixed w-full z-50 transition-all duration-300 border-b ${
-        scrolled 
-          ? 'bg-white/95 backdrop-blur-md border-slate-200 shadow-sm' 
-          : 'bg-white/90 border-transparent'
-      }`}
-    >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-16 items-center">
-          {/* Logo */}
-          <Link to="/" className="flex-shrink-0 flex items-center gap-2 group">
-            <Logo theme="dark" className="scale-90 origin-left" />
-          </Link>
+  const isHomePage = location.pathname === '/';
 
-          {/* Desktop Menu */}
-          <div className="hidden md:flex space-x-6 items-center">
-            {navLinks.map((link) => (
-              <Link
-                key={link.path}
-                to={link.path}
-                className={`text-[11px] font-bold transition-colors uppercase tracking-[0.15em] ${
-                  isActive(link.path)
-                    ? 'text-primary'
-                    : 'text-slate-500 hover:text-primary'
-                }`}
-              >
-                {link.name}
-              </Link>
-            ))}
-            <Link
-              to="/contact"
-              className="bg-primary hover:bg-primary-dark text-white px-4 py-2 rounded-lg text-xs font-bold transition-all shadow-md shadow-primary/10 hover:shadow-primary/20 hover:-translate-y-0.5"
-            >
-              Contáctanos
-            </Link>
+  // Determine navbar theme
+  // We want transparency ONLY at the very top of the home page
+  const showSolidNav = scrolled || !isHomePage;
+
+  const navBg = showSolidNav
+    ? 'bg-background-dark/80 backdrop-blur-lg shadow-2xl border-b border-white/5 py-3'
+    : 'bg-transparent py-5';
+
+  const linkColor = 'text-slate-300';
+
+  // In Logo.tsx: theme === 'light' ? 'brightness-0 invert' : ''
+  // So 'light' means WHITE logo.
+  // We want WHITE logo on dark background.
+  // So logoTheme should be 'light' if navBg is dark.
+  const logoTheme = showSolidNav ? 'light' : 'light';
+  // Actually, on the home page hero, it's also dark behind, so 'light' (white) logo is ALWAYS correct for dark backgrounds.
+
+  return (
+    <nav className={`fixed w-full z-50 transition-all duration-300 ${navBg}`}>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-16">
+          <div className="flex-shrink-0 flex items-center">
+            <Logo theme={logoTheme} />
           </div>
 
+          <div className="hidden md:block">
+            <div className="ml-10 flex items-baseline space-x-8">
+              {[
+                ['INICIO', '/'],
+                ['NOSOTROS', '/about'],
+                ['SERVICIOS', '/services'],
+                ['PROYECTOS', '/projects']
+              ].map(([name, path]) => (
+                <Link
+                  key={name}
+                  to={path}
+                  className={`px-3 py-2 text-[13px] font-bold tracking-[0.1em] transition-all duration-300 hover:text-primary ${location.pathname === path ? 'text-primary' : (isHomePage && !scrolled ? 'text-white' : 'text-slate-300')
+                    }`}
+                >
+                  {name}
+                </Link>
+              ))}
+              <Link
+                to="/contact"
+                className="bg-primary hover:bg-white hover:text-primary text-white px-8 py-3 rounded-none text-xs font-bold tracking-[0.2em] uppercase transition-all duration-300 shadow-xl ml-4"
+              >
+                Contáctanos
+              </Link>
+            </div>
+          </div>
           {/* Mobile Menu Button */}
           <div className="md:hidden flex items-center">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-slate-500 hover:text-primary transition-colors p-2"
+              className={`${showSolidNav ? 'text-slate-300' : 'text-white'} hover:text-primary transition-colors p-2`}
             >
               {isOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -88,11 +102,10 @@ export default function Navbar() {
               <Link
                 key={link.path}
                 to={link.path}
-                className={`block px-3 py-3 rounded-md text-base font-medium ${
-                  isActive(link.path)
-                    ? 'bg-primary/5 text-primary'
-                    : 'text-slate-600 hover:bg-slate-50 hover:text-primary'
-                }`}
+                className={`block px-3 py-3 rounded-md text-base font-medium ${isActive(link.path)
+                  ? 'bg-primary/5 text-primary'
+                  : 'text-slate-600 hover:bg-slate-50 hover:text-primary'
+                  }`}
               >
                 {link.name}
               </Link>

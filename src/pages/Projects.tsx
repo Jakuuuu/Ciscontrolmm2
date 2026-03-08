@@ -1,5 +1,6 @@
-import { motion } from 'motion/react';
+import { motion, AnimatePresence } from 'motion/react';
 import { useState } from 'react';
+import { MapPin, Building2, ExternalLink, Calendar, Filter } from 'lucide-react';
 
 export default function Projects() {
   const [filter, setFilter] = useState('all');
@@ -7,97 +8,116 @@ export default function Projects() {
   const projects = [
     {
       id: 1,
-      title: 'Actualización de Automatización de Refinería',
+      title: 'Optimización de Unidad de Craqueo Catalítico',
       category: 'automation',
       client: 'PDVSA',
-      location: 'Puerto La Cruz, Anzoátegui',
-      image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCNW4og58ZSYjCytfhCNP6Sg3mRwoRTfkCzr-yIXyifQKw3P0Diujd4lUySgwKBfegmpgMLFQptraSZlUb6lix8df9X1eH_YsaOp_bPZXt-MiTRZ7q9fFfBv8nwtVJ_Y8pHz3HTa8CT2E4BVwLUIs_37XFdglrYzt2V80nZMsF9A5WvMlSp78W5dYBzkaqXpAZOEHp5B6uGZ7HGqNW3siocTEMpu8sZhto2t64AcIVqk9INLqNzZ3xDBWMQWDLShIkRg64O3Vo5XdI',
-      description: 'Modernización del sistema de control distribuido (DCS) para la unidad de craqueo catalítico.'
+      location: 'Complejo Criogénico José',
+      year: '2023',
+      image: 'https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=1000&auto=format&fit=crop',
+      description: 'Implementación de control avanzado de procesos (APC) y migración de DCS para máxima eficiencia operativa.'
     },
     {
       id: 2,
-      title: 'Subestación 115kV',
+      title: 'Sistema de Respaldo Crítico Data Center',
       category: 'electricity',
-      client: 'CORPOELEC',
-      location: 'Maracaibo, Zulia',
-      image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCjbLxuIPGeVfREcIqQTj5eeZ-snz7eqsZwlYALzIOMAHVJ83DPbPn9DLAHYh2ITqIJ6EJoCjwc2dgkRupUnr6BccEUaPFrVkICt2LhykAZ1px7Sla0QqYMDAuvMhzDcom3VtLYsl14D23xwKje-u9e7yxicJ3PTSVf9qD8_MY7QrCDV-2uE5nli_VrWXTzdhhIFSogO-Rpl0Wir1W3vhB0hKfujdfLyE7h0WMcD33dUhBXnkZytIvXJpOm-dNpE39Vica9pYnPc8k',
-      description: 'Construcción llave en mano de una subestación de alta tensión incluyendo transformadores y tableros.'
+      client: 'Corporación Bancaria',
+      location: 'Caracas, DC',
+      year: '2024',
+      image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc51?q=80&w=1000&auto=format&fit=crop',
+      description: 'Diseño e integración de sistema de energía redundante Tier IV con UPS paralelo y generación sincronizada.'
     },
     {
       id: 3,
-      title: 'Backbone de Fibra Óptica',
+      title: 'Infraestructura de Red Industrial 5.0',
       category: 'telecom',
-      client: 'Parque Industrial',
-      location: 'Valencia, Carabobo',
-      image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBUkDwJ-WTl0Wnw_oI0DcKcOkHoZFPQLc0FccMfwt2Oav6u_VOqgj89_9ZBzATBhYOk3v3hoMJy2FmUjsXkKcE97d6A7zPwIriUWYibi3_zxfU2fSB90amlZWH1OFTSdQc2PXoeeq38mbk91b_wyzfXHGMYR17Flazd2QpT4drglwNbs8bZXz6repDkGmm0wkOpC7B5eSbl-DZduDDF_6Mkrduc7vtfwmUvicegXffX9JPqG8vbTZgG2HEfkypb3xjJI--8FxfeL1k',
-      description: 'Instalación de 50km de cable de fibra óptica para un nuevo complejo industrial.'
+      client: 'Siderúrgica del Orinoco',
+      location: 'Puerto Ordaz, Bolívar',
+      year: '2023',
+      image: 'https://images.unsplash.com/photo-1544380903-533923363321?q=80&w=1000&auto=format&fit=crop',
+      description: 'Red de fibra óptica monomodo de alta disponibilidad para monitoreo en tiempo real de hornos industriales.'
     },
     {
       id: 4,
-      title: 'Sistema de Supresión de Incendios',
+      title: 'Protección de Tanques de Combustible',
       category: 'safety',
-      client: 'Planta Química',
-      location: 'El Tablazo, Zulia',
-      image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuD0D72fWmh2gw74fo9fPsK5m_xyMybUt8R3QvRCrct-AbwrbE7htY1knkKJhiM9gj6FxSJr8LAGrIZVDcvVZ_fb1nF7pkR9qLHAOnerptFLg6FaYyisFcZzpbRkjfBqqsGRP3SV9eRFXZ4Ze24B3q5KFjGzHExWP2Xlz5bXwt2GwvQvTLlt_9GYqUj2bctm30zte9VLN0Fi7xavOUumasaGOWMrrC1XeDRTl7VcFTMcILSthlmpYawTZWLyQgMXKV6qIBYgOqprBQU',
-      description: 'Diseño e instalación de un sistema de supresión de incendios a base de espuma para tanques de almacenamiento.'
+      client: 'Terminal Marítimo',
+      location: 'Zulia',
+      year: '2024',
+      image: 'https://images.unsplash.com/photo-1590218706342-023a1e944b25?q=80&w=1000&auto=format&fit=crop',
+      description: 'Instalación de sistema SIL-2 de detección de fuego y gas con supresión de espuma automática.'
     },
     {
       id: 5,
-      title: 'Migración SCADA',
-      category: 'automation',
-      client: 'Planta de Tratamiento de Agua',
-      location: 'Barquisimeto, Lara',
-      image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDwtAN3f6HHNQ_HXYn9kWzzDao-HPOyJQ0BN0MA-Kv5UjLFBoeVPoU00d5lxdV8dVmHWsjDf7QQtHQe-TpAAf8labS0lFseJ0D7AOtEGioHMZCZBMhwoxJtmPtLh8XFMRCujuFdCPd3y85eUvWYQS_Jg5D-z0fblRbo3JQwdbygyg31YUarlQT5L7cdHYHdDYrNlJvWHolUjMI__8Pv2QISqoSE-qm0aLmzalhHWynWpBAUnAAcBt7pbzYhGFUoTq0hoFXBRmSGR-g',
-      description: 'Migración de sistemas SCADA heredados a una arquitectura moderna basada en web.'
+      title: 'Modernización de Subestación Eléctrica',
+      category: 'electricity',
+      client: 'Zona Industrial Valencia',
+      location: 'Carabobo',
+      year: '2022',
+      image: 'https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?q=80&w=1000&auto=format&fit=crop',
+      description: 'Reemplazo de transformadores de potencia y actualización de celdas de media tensión con protecciones digitales.'
     },
     {
       id: 6,
-      title: 'Energía para Centro de Datos',
-      category: 'electricity',
-      client: 'Empresa Tecnológica',
-      location: 'Caracas, Distrito Capital',
-      image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDeIPouHft2P1Yi1nMkrpz1-795RoxsE7pJ-bOZFZ29foIlxcQNA-iSMqpEjfIdmia7O8H6jgxWZRBoXCcLtQ8v_REnCjdsC555419hJbrXuv6rd5VYq4S2wg7RrG06T_n0Vq0lfqu7KX2OcJJoFpWiJirkbSElVB7bmqDXc3G1yLqfv4yybUGTqv_rJnC-q2QFZ8C5kiEimYhVbNwhm8FwAZX4SuK52wRo8S9PzI0m_fsJVe06C8p8m9_KpLNEsm2Ax2T0VVnB3AE',
-      description: 'Sistema de suministro de energía redundante (UPS + Generadores) para un centro de datos Tier III.'
+      title: 'Automatización de Planta de Alimentos',
+      category: 'automation',
+      client: 'Consorcio Alimenticio',
+      location: 'Aragua',
+      year: '2024',
+      image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=1000&auto=format&fit=crop',
+      description: 'Línea de producción integrada con PLC Siemens S7-1500 y sistema SCADA Ignition para trazabilidad total.'
     }
   ];
 
-  const filteredProjects = filter === 'all' 
-    ? projects 
+  const filteredProjects = filter === 'all'
+    ? projects
     : projects.filter(p => p.category === filter);
 
   const categories = [
-    { id: 'all', label: 'Todos' },
+    { id: 'all', label: 'Todos los Sectores' },
     { id: 'automation', label: 'Automatización' },
     { id: 'electricity', label: 'Electricidad' },
-    { id: 'telecom', label: 'Telecom' },
-    { id: 'safety', label: 'Seguridad' }
+    { id: 'telecom', label: 'Telecomunicaciones' },
+    { id: 'safety', label: 'Seguridad Industrial' }
   ];
 
   return (
-    <div className="pt-20 min-h-screen bg-background-light">
-      {/* Header */}
-      <section className="bg-background-dark text-white py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl font-bold mb-4">Portafolio de Proyectos</h1>
-          <p className="text-slate-400 max-w-2xl mx-auto">
-            Una selección de nuestros desafíos de ingeniería más impactantes resueltos en toda Venezuela.
-          </p>
+    <div className="bg-background-dark min-h-screen">
+      {/* Header Section */}
+      <section className="relative pt-40 pb-20 border-b border-white/5">
+        <div className="absolute inset-0 industrial-grid opacity-20"></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="text-left"
+          >
+            <span className="text-[10px] font-bold tracking-[0.5em] uppercase text-primary mb-6 block">Casos de Éxito</span>
+            <h1 className="text-6xl md:text-8xl font-black text-white tracking-tighter leading-none mb-8">
+              Portafolio <br /> <span className="text-slate-500">Técnico</span>
+            </h1>
+            <p className="text-xl text-slate-400 max-w-2xl leading-relaxed">
+              Soluciones de ingeniería de alto impacto ejecutadas bajo los más rigurosos estándares internacionales de calidad y seguridad.
+            </p>
+          </motion.div>
         </div>
       </section>
 
-      {/* Filter */}
-      <section className="py-8 border-b border-slate-200 bg-white sticky top-20 z-30 shadow-sm">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-wrap justify-center gap-4">
+      {/* Filter Bar */}
+      <section className="bg-white/5 backdrop-blur-md sticky top-20 z-30 border-b border-white/5">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+          <div className="flex flex-wrap items-center gap-4">
+            <div className="flex items-center gap-2 text-primary mr-4">
+              <Filter size={16} />
+              <span className="text-[10px] font-bold uppercase tracking-widest">Filtrar</span>
+            </div>
             {categories.map(cat => (
               <button
                 key={cat.id}
                 onClick={() => setFilter(cat.id)}
-                className={`px-6 py-2 rounded-full text-sm font-medium transition-all ${
-                  filter === cat.id 
-                    ? 'bg-primary text-white shadow-md' 
-                    : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
-                }`}
+                className={`px-6 py-2 border text-[10px] font-bold uppercase tracking-widest transition-all ${filter === cat.id
+                  ? 'bg-primary border-primary text-white shadow-[0_0_20px_rgba(255,102,0,0.3)]'
+                  : 'border-white/10 text-slate-400 hover:border-primary/50 hover:text-white'
+                  }`}
               >
                 {cat.label}
               </button>
@@ -106,50 +126,67 @@ export default function Projects() {
         </div>
       </section>
 
-      {/* Grid */}
-      <section className="py-16">
+      {/* Projects Grid */}
+      <section className="py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div 
+          <motion.div
             layout
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-1"
           >
-            {filteredProjects.map(project => (
-              <motion.div
-                layout
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.9 }}
-                transition={{ duration: 0.3 }}
-                key={project.id}
-                className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow border border-slate-100 group"
-              >
-                <div className="h-56 overflow-hidden relative">
-                  <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors z-10"></div>
-                  <img 
-                    src={project.image} 
-                    alt={project.title} 
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                  />
-                  <div className="absolute top-4 right-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-primary z-20 uppercase tracking-wide">
-                    {project.category}
+            <AnimatePresence mode="popLayout">
+              {filteredProjects.map(project => (
+                <motion.div
+                  layout
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  key={project.id}
+                  className="bg-white/5 border border-white/5 group relative overflow-hidden flex flex-col"
+                >
+                  <div className="aspect-video overflow-hidden relative">
+                    <div className="absolute inset-0 bg-background-dark/40 group-hover:bg-transparent transition-colors z-10"></div>
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
+                    />
+                    <div className="absolute bottom-0 left-0 p-4 z-20">
+                      <span className="bg-primary text-white text-[10px] font-bold px-3 py-1 uppercase tracking-widest">
+                        {project.category}
+                      </span>
+                    </div>
                   </div>
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-slate-900 mb-2">{project.title}</h3>
-                  <div className="flex items-center gap-4 text-xs text-slate-500 mb-4">
-                    <span className="flex items-center gap-1">
-                      <span className="material-icons text-sm">business</span> {project.client}
-                    </span>
-                    <span className="flex items-center gap-1">
-                      <span className="material-icons text-sm">place</span> {project.location}
-                    </span>
+
+                  <div className="p-8 flex flex-col flex-grow">
+                    <div className="flex justify-between items-start mb-4">
+                      <h3 className="text-xl font-bold text-white tracking-tight leading-tight group-hover:text-primary transition-colors">
+                        {project.title}
+                      </h3>
+                      <ExternalLink size={16} className="text-white/20 group-hover:text-primary transition-colors" />
+                    </div>
+
+                    <div className="grid grid-cols-2 gap-4 mb-6">
+                      <div className="flex items-center gap-2 text-slate-500">
+                        <Building2 size={12} className="text-primary" />
+                        <span className="text-[10px] uppercase font-bold tracking-wider">{project.client}</span>
+                      </div>
+                      <div className="flex items-center gap-2 text-slate-500">
+                        <MapPin size={12} className="text-primary" />
+                        <span className="text-[10px] uppercase font-bold tracking-wider">{project.location}</span>
+                      </div>
+                      <div className="flex items-center gap-2 text-slate-500">
+                        <Calendar size={12} className="text-primary" />
+                        <span className="text-[10px] uppercase font-bold tracking-wider">{project.year}</span>
+                      </div>
+                    </div>
+
+                    <p className="text-sm text-slate-400 leading-relaxed mt-auto border-t border-white/5 pt-6">
+                      {project.description}
+                    </p>
                   </div>
-                  <p className="text-slate-600 text-sm leading-relaxed">
-                    {project.description}
-                  </p>
-                </div>
-              </motion.div>
-            ))}
+                </motion.div>
+              ))}
+            </AnimatePresence>
           </motion.div>
         </div>
       </section>

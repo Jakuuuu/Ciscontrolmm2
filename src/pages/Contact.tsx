@@ -1,116 +1,132 @@
 import { motion } from 'motion/react';
+import { Mail, Phone, MapPin, Clock, Send, MessageSquareText } from 'lucide-react';
 
 export default function Contact() {
   return (
-    <div className="pt-20 min-h-screen bg-background-light">
-      {/* Header */}
-      <section className="bg-background-dark text-white py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl font-bold mb-4">Contáctanos</h1>
-          <p className="text-slate-400 max-w-2xl mx-auto">
-            ¿Listo para comenzar tu proyecto? Ponte en contacto con nuestro equipo de ingeniería hoy mismo.
-          </p>
+    <div className="bg-background-dark min-h-screen">
+      {/* Header Section */}
+      <section className="relative pt-40 pb-20 border-b border-white/5">
+        <div className="absolute inset-0 industrial-grid opacity-20"></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="text-left"
+          >
+            <span className="text-[10px] font-bold tracking-[0.5em] uppercase text-primary mb-6 block">Contacto Directo</span>
+            <h1 className="text-6xl md:text-8xl font-black text-white tracking-tighter leading-none mb-8">
+              Inicie su <br /> <span className="text-slate-500">Proyecto</span>
+            </h1>
+            <p className="text-xl text-slate-400 max-w-2xl leading-relaxed">
+              Nuestro equipo de ingeniería está listo para analizar sus requerimientos técnicos y proponer soluciones de alto rendimiento.
+            </p>
+          </motion.div>
         </div>
       </section>
 
-      <section className="py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-16">
-            {/* Contact Info */}
-            <div className="space-y-8">
+      <section className="py-24 relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="grid lg:grid-cols-12 gap-16 items-start">
+
+            {/* Contact Info - Technical Sidebar */}
+            <div className="lg:col-span-5 space-y-12">
               <div>
-                <h2 className="text-2xl font-bold text-slate-900 mb-6">Ponte en Contacto</h2>
-                <p className="text-slate-600 mb-8">
-                  Ya sea que tengas un proyecto específico en mente o simplemente quieras explorar cómo podemos ayudar a optimizar tus operaciones, estamos aquí para ayudar.
+                <h2 className="text-3xl font-black text-white tracking-tight uppercase mb-8">Canales Oficiales</h2>
+                <div className="space-y-8">
+                  <div className="flex gap-6 group">
+                    <div className="w-12 h-12 bg-white/5 border border-white/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all">
+                      <MapPin size={20} />
+                    </div>
+                    <div>
+                      <h3 className="text-[10px] font-bold uppercase tracking-widest text-slate-500 mb-1">Sede Central</h3>
+                      <p className="text-white font-medium">Zona Industrial II, Valencia, Carabobo 2001, Venezuela</p>
+                    </div>
+                  </div>
+
+                  <div className="flex gap-6 group">
+                    <div className="w-12 h-12 bg-white/5 border border-white/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all">
+                      <Phone size={20} />
+                    </div>
+                    <div>
+                      <h3 className="text-[10px] font-bold uppercase tracking-widest text-slate-500 mb-1">Ingeniería y Ventas</h3>
+                      <p className="text-white font-medium">+58 (241) 832-1594</p>
+                      <p className="text-slate-400 text-sm">Disponibilidad: 08:00 - 17:00 (VET)</p>
+                    </div>
+                  </div>
+
+                  <div className="flex gap-6 group">
+                    <div className="w-12 h-12 bg-white/5 border border-white/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all">
+                      <Mail size={20} />
+                    </div>
+                    <div>
+                      <h3 className="text-[10px] font-bold uppercase tracking-widest text-slate-500 mb-1">Consultas Técnicas</h3>
+                      <p className="text-white font-medium group-hover:text-primary transition-colors">proyectos@ciscontrol.com</p>
+                      <p className="text-white font-medium group-hover:text-primary transition-colors">info@ciscontrol.com</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Technical Support Box */}
+              <div className="p-8 bg-primary/5 border border-primary/20">
+                <div className="flex items-center gap-4 mb-4 text-primary">
+                  <Clock size={20} />
+                  <span className="text-[10px] font-bold uppercase tracking-widest">Respuesta Garantizada</span>
+                </div>
+                <p className="text-sm text-slate-400 leading-relaxed">
+                  Evaluamos cada solicitud bajo criterios técnicos rigurosos. Recibirá una respuesta de nuestro departamento de ingeniería en menos de 24 horas hábiles.
                 </p>
-              </div>
-
-              <div className="space-y-6">
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center text-primary flex-shrink-0">
-                    <span className="material-icons">location_on</span>
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-slate-900">Sede Central</h3>
-                    <p className="text-slate-600">Zona Industrial, Valencia, Venezuela</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center text-primary flex-shrink-0">
-                    <span className="material-icons">phone</span>
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-slate-900">Teléfono</h3>
-                    <p className="text-slate-600">+58 (212) 123-4567</p>
-                    <p className="text-slate-500 text-sm">Lun-Vie, 9am - 6pm CST</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center text-primary flex-shrink-0">
-                    <span className="material-icons">email</span>
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-slate-900">Correo Electrónico</h3>
-                    <p className="text-slate-600">contact@cis-control.com</p>
-                    <p className="text-slate-600">sales@cis-control.com</p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Map Placeholder */}
-              <div className="h-64 bg-slate-200 rounded-xl overflow-hidden relative">
-                <div className="absolute inset-0 flex items-center justify-center text-slate-500">
-                  <span className="flex flex-col items-center gap-2">
-                    <span className="material-icons text-4xl">map</span>
-                    <span>Integración de Mapa Interactivo</span>
-                  </span>
-                </div>
-                {/* In a real app, embed Google Maps iframe here */}
               </div>
             </div>
 
-            {/* Contact Form */}
-            <div className="bg-white p-8 rounded-2xl shadow-lg border border-slate-100">
-              <h2 className="text-2xl font-bold text-slate-900 mb-6">Envíanos un Mensaje</h2>
-              <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div>
-                    <label className="block text-sm font-medium text-slate-700 mb-2">Nombre</label>
-                    <input type="text" className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all" placeholder="Juan" />
+            {/* Contact Form - Industrial Design */}
+            <div className="lg:col-span-7 bg-white/5 border border-white/10 p-12 relative">
+              <div className="absolute top-0 right-0 p-8 opacity-5">
+                <MessageSquareText size={120} className="text-white" />
+              </div>
+
+              <h2 className="text-3xl font-black text-white tracking-tight uppercase mb-10">Formulario de Solicitud</h2>
+
+              <form className="space-y-8" onSubmit={(e) => e.preventDefault()}>
+                <div className="grid md:grid-cols-2 gap-8">
+                  <div className="group">
+                    <label className="block text-[10px] font-bold uppercase tracking-widest text-slate-500 mb-2 group-focus-within:text-primary transition-colors">Nombre Completo</label>
+                    <input type="text" className="w-full bg-white/5 border border-white/10 px-6 py-4 text-white outline-none focus:border-primary transition-all" placeholder="Ej. Ing. Carlos Pérez" />
                   </div>
-                  <div>
-                    <label className="block text-sm font-medium text-slate-700 mb-2">Apellido</label>
-                    <input type="text" className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all" placeholder="Pérez" />
+                  <div className="group">
+                    <label className="block text-[10px] font-bold uppercase tracking-widest text-slate-500 mb-2 group-focus-within:text-primary transition-colors">Empresa / Organización</label>
+                    <input type="text" className="w-full bg-white/5 border border-white/10 px-6 py-4 text-white outline-none focus:border-primary transition-all" placeholder="Ej. Empresa Polar" />
                   </div>
                 </div>
 
-                <div>
-                  <label className="block text-sm font-medium text-slate-700 mb-2">Correo Electrónico</label>
-                  <input type="email" className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all" placeholder="juan@empresa.com" />
+                <div className="group">
+                  <label className="block text-[10px] font-bold uppercase tracking-widest text-slate-500 mb-2 group-focus-within:text-primary transition-colors">Correo Corporativo</label>
+                  <input type="email" className="w-full bg-white/5 border border-white/10 px-6 py-4 text-white outline-none focus:border-primary transition-all" placeholder="c.perez@empresa.com" />
                 </div>
 
-                <div>
-                  <label className="block text-sm font-medium text-slate-700 mb-2">Asunto</label>
-                  <select className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all bg-white">
-                    <option>Consulta General</option>
-                    <option>Solicitar Cotización</option>
-                    <option>Soporte Técnico</option>
-                    <option>Oportunidad de Alianza</option>
+                <div className="group">
+                  <label className="block text-[10px] font-bold uppercase tracking-widest text-slate-500 mb-2 group-focus-within:text-primary transition-colors">Servicio Requerido</label>
+                  <select className="w-full bg-white/5 border border-white/10 px-6 py-4 text-white outline-none focus:border-primary transition-all appearance-none cursor-pointer">
+                    <option className="bg-background-dark">Automatización Industrial</option>
+                    <option className="bg-background-dark">Ingeniería Eléctrica</option>
+                    <option className="bg-background-dark">Telecomunicaciones</option>
+                    <option className="bg-background-dark">Seguridad Proceso (SIS)</option>
+                    <option className="bg-background-dark">Mantenimiento Especializado</option>
                   </select>
                 </div>
 
-                <div>
-                  <label className="block text-sm font-medium text-slate-700 mb-2">Mensaje</label>
-                  <textarea rows={4} className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all" placeholder="Cuéntanos sobre tu proyecto..."></textarea>
+                <div className="group">
+                  <label className="block text-[10px] font-bold uppercase tracking-widest text-slate-500 mb-2 group-focus-within:text-primary transition-colors">Descripción del Requerimiento</label>
+                  <textarea rows={5} className="w-full bg-white/5 border border-white/10 px-6 py-4 text-white outline-none focus:border-primary transition-all resize-none" placeholder="Detalle los desafíos técnicos de su proyecto..."></textarea>
                 </div>
 
-                <button type="submit" className="w-full bg-primary hover:bg-primary-dark text-white font-bold py-4 rounded-lg shadow-lg shadow-primary/30 transition-all hover:-translate-y-1">
-                  Enviar Mensaje
+                <button type="submit" className="w-full bg-primary py-6 text-white text-[12px] font-black uppercase tracking-[0.3em] hover:bg-white hover:text-black transition-all flex items-center justify-center gap-4 group">
+                  Enviar Requerimiento
+                  <Send size={16} className="group-hover:translate-x-2 transition-transform" />
                 </button>
               </form>
             </div>
+
           </div>
         </div>
       </section>
