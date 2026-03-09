@@ -126,18 +126,18 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
-            {/* Automation - Large */}
+            {/* Electricity - Square */}
             <motion.div
               whileHover={{ y: -10 }}
-              className="md:col-span-8 group relative overflow-hidden bg-slate-800 aspect-[16/9]"
+              className="md:col-span-4 group relative overflow-hidden bg-slate-800 aspect-square"
             >
-              <img src={autoImg} alt="Automatización" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-70 group-hover:opacity-100" loading="lazy" />
+              <img src={elecImg} alt="Electricidad" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-70 group-hover:opacity-100" loading="lazy" />
               <div className="absolute inset-0 bg-gradient-to-t from-background-dark via-background-dark/20 to-transparent"></div>
               <div className="absolute bottom-10 left-10">
-                <h3 className="text-3xl font-bold text-white mb-2">Automatización Industrial</h3>
-                <p className="text-slate-400 max-w-md text-sm leading-relaxed mb-6 italic">Sistemas PLC, SCADA y optimización de procesos mediante tecnología de vanguardia.</p>
-                <Link to="/services#automation" className="inline-flex items-center gap-2 text-xs font-bold tracking-widest uppercase text-white hover:text-primary transition-colors">
-                  Explorar detalles <span className="w-8 h-[1px] bg-primary"></span>
+                <h3 className="text-2xl font-bold text-white mb-2">Electricidad</h3>
+                <p className="text-slate-400 text-sm leading-relaxed mb-6">Ingeniería eléctrica de alta y media tensión.</p>
+                <Link to="/services" className="inline-flex items-center gap-2 text-xs font-bold tracking-widest uppercase text-white hover:text-primary transition-colors">
+                  Saber más <span className="w-8 h-[1px] bg-primary"></span>
                 </Link>
               </div>
             </motion.div>
@@ -158,34 +158,50 @@ export default function Home() {
               </div>
             </motion.div>
 
-            {/* Electricity - Square */}
+            {/* Fibra - Square */}
             <motion.div
               whileHover={{ y: -10 }}
               className="md:col-span-4 group relative overflow-hidden bg-slate-800 aspect-square"
             >
-              <img src={elecImg} alt="Electricidad" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-70 group-hover:opacity-100" loading="lazy" />
+              <img src={fibraImg} alt="Fibra Comunicación" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-70 group-hover:opacity-100" loading="lazy" />
               <div className="absolute inset-0 bg-gradient-to-t from-background-dark via-background-dark/20 to-transparent"></div>
               <div className="absolute bottom-10 left-10">
-                <h3 className="text-2xl font-bold text-white mb-2">Electricidad</h3>
-                <p className="text-slate-400 text-sm leading-relaxed mb-6">Ingeniería eléctrica de alta y media tensión.</p>
+                <h3 className="text-2xl font-bold text-white mb-2">Comunicaciones Ópticas</h3>
+                <p className="text-slate-400 text-sm leading-relaxed mb-6">Infraestructura de red robusta para entornos industriales.</p>
                 <Link to="/services" className="inline-flex items-center gap-2 text-xs font-bold tracking-widest uppercase text-white hover:text-primary transition-colors">
                   Saber más <span className="w-8 h-[1px] bg-primary"></span>
                 </Link>
               </div>
             </motion.div>
 
-            {/* Fibra - Large */}
+            {/* Automation - Large */}
             <motion.div
               whileHover={{ y: -10 }}
               className="md:col-span-8 group relative overflow-hidden bg-slate-800 aspect-[16/9]"
             >
-              <img src={fibraImg} alt="Fibra Comunicación" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-70 group-hover:opacity-100" loading="lazy" />
+              <img src={autoImg} alt="Automatización" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-70 group-hover:opacity-100" loading="lazy" />
               <div className="absolute inset-0 bg-gradient-to-t from-background-dark via-background-dark/20 to-transparent"></div>
               <div className="absolute bottom-10 left-10">
-                <h3 className="text-3xl font-bold text-white mb-2">Comunicaciones Ópticas</h3>
-                <p className="text-slate-400 max-w-md text-sm leading-relaxed mb-6">Infraestructura de red robusta para entornos industriales exigentes.</p>
-                <Link to="/services" className="inline-flex items-center gap-2 text-xs font-bold tracking-widest uppercase text-white hover:text-primary transition-colors">
+                <h3 className="text-3xl font-bold text-white mb-2">Automatización Industrial</h3>
+                <p className="text-slate-400 max-w-md text-sm leading-relaxed mb-6 italic">Sistemas PLC, SCADA y optimización de procesos mediante tecnología de vanguardia.</p>
+                <Link to="/services#automation" className="inline-flex items-center gap-2 text-xs font-bold tracking-widest uppercase text-white hover:text-primary transition-colors">
                   Explorar detalles <span className="w-8 h-[1px] bg-primary"></span>
+                </Link>
+              </div>
+            </motion.div>
+
+            {/* Corrosion - Square */}
+            <motion.div
+              whileHover={{ y: -10 }}
+              className="md:col-span-4 group relative overflow-hidden bg-slate-800 aspect-square"
+            >
+              <img src={corrosionImg} alt="Sistemas de Corrosión" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-70 group-hover:opacity-100" loading="lazy" />
+              <div className="absolute inset-0 bg-gradient-to-t from-background-dark via-background-dark/20 to-transparent"></div>
+              <div className="absolute bottom-10 left-10">
+                <h3 className="text-2xl font-bold text-white mb-2">Sistemas de Corrosión</h3>
+                <p className="text-slate-400 text-sm leading-relaxed mb-6">Protección galvánica y monitoreo de integridad.</p>
+                <Link to="/services" className="inline-flex items-center gap-2 text-xs font-bold tracking-widest uppercase text-white hover:text-primary transition-colors">
+                  Saber más <span className="w-8 h-[1px] bg-primary"></span>
                 </Link>
               </div>
             </motion.div>
