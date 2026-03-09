@@ -21,9 +21,9 @@ export default function Home() {
             src={heroImg}
           />
           {/* Enhanced Overlay for readability and depth */}
-          <div className="absolute inset-0 bg-slate-900/40"></div>
-          <div className="absolute inset-0 bg-gradient-to-r from-background-dark/90 via-background-dark/40 to-transparent"></div>
-          <div className="absolute inset-0 bg-gradient-to-t from-background-dark via-transparent to-transparent opacity-60"></div>
+          <div className="absolute inset-0 bg-slate-900/60"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-background-dark/95 via-background-dark/60 to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-background-dark via-transparent to-transparent opacity-80"></div>
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-20">
@@ -33,12 +33,12 @@ export default function Home() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-white tracking-tighter leading-[0.85] mb-8">
+              <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-white tracking-tighter leading-[0.85] mb-8 [text-shadow:_0_4px_8px_rgba(0,0,0,0.5)]">
                 Ingeniería que <br />
                 <span className="text-white">Evoluciona</span>
               </h1>
 
-              <p className="text-lg md:text-xl text-slate-300 mb-10 max-w-xl leading-relaxed">
+              <p className="text-lg md:text-xl text-white/90 font-medium mb-10 max-w-xl leading-relaxed [text-shadow:_0_2px_4px_rgba(0,0,0,0.8)]">
                 Como socios estratégicos, guiamos a la industria en su transición hacia sistemas de energía y automatización más eficientes y sostenibles.
               </p>
 
