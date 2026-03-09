@@ -65,12 +65,8 @@ export default function Home() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="grid grid-cols-1 sm:grid-cols-3 gap-8 pt-12 border-t border-white/10"
+              className="grid grid-cols-1 sm:grid-cols-2 gap-8 pt-12 border-t border-white/10"
             >
-              <div className="flex flex-col">
-                <span className="text-4xl font-bold text-white mb-1">+2800</span>
-                <span className="text-xs uppercase tracking-widest text-slate-400 font-semibold">Puntos Ópticos instalados</span>
-              </div>
               <div className="flex flex-col">
                 <span className="text-4xl font-bold text-white mb-1">20+</span>
                 <span className="text-xs uppercase tracking-widest text-slate-400 font-semibold">Años de experiencia técnica</span>
@@ -205,12 +201,7 @@ export default function Home() {
           <div className="absolute bottom-0 right-0 w-96 h-96 bg-black rounded-full mix-blend-overlay filter blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center text-white">
-            <div className="p-6 rounded-lg bg-white/5 backdrop-blur border border-white/10 hover:bg-white/10 transition-colors">
-              <div className="text-5xl md:text-6xl font-extrabold mb-2">+2800</div>
-              <div className="h-1 w-12 bg-white/50 mx-auto mb-4 rounded-full"></div>
-              <p className="text-lg font-medium text-blue-100 uppercase tracking-wide">Puntos Ópticos</p>
-            </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 text-center text-white max-w-4xl mx-auto">
             <div className="p-6 rounded-lg bg-white/5 backdrop-blur border border-white/10 hover:bg-white/10 transition-colors">
               <div className="text-5xl md:text-6xl font-extrabold mb-2">20+</div>
               <div className="h-1 w-12 bg-white/50 mx-auto mb-4 rounded-full"></div>

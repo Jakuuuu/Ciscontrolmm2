@@ -1,6 +1,6 @@
 import { motion } from 'motion/react';
 import { Target, Eye, ShieldCheck, Cpu, Lightbulb, PenTool, Users, Award } from 'lucide-react';
-import workspaceImg from '../assets/about_workspace.png';
+import workspaceImg from '../assets/Nosotros.jpg';
 
 export default function About() {
   const values = [
@@ -50,8 +50,8 @@ export default function About() {
             >
               <img
                 src={workspaceImg}
-                alt="Workspace"
-                className="w-full h-auto grayscale hover:grayscale-0 transition-all duration-700"
+                alt="Nuestro Equipo en CIS CONTROL"
+                className="w-full h-auto transition-all duration-700"
                 loading="lazy"
               />
               <div className="absolute -bottom-10 -left-10 w-40 h-40 border border-white/5 -z-10 bg-industrial-grid"></div>
