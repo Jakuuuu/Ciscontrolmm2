@@ -92,8 +92,8 @@ export default function Projects() {
             className="text-left"
           >
             <span className="text-[10px] font-bold tracking-[0.5em] uppercase text-primary mb-6 block">Casos de Éxito</span>
-            <h1 className="text-6xl md:text-8xl font-black text-white tracking-tighter leading-none mb-8">
-              Portafolio <br /> <span className="text-slate-500">Técnico</span>
+            <h1 className="text-5xl md:text-7xl font-black text-white tracking-tighter leading-none mb-8">
+              Estos son algunos de <br /> <span className="text-slate-500">nuestros proyectos</span>
             </h1>
             <p className="text-xl text-slate-400 max-w-2xl leading-relaxed">
               Soluciones de ingeniería de alto impacto ejecutadas bajo los más rigurosos estándares internacionales de calidad y seguridad.
