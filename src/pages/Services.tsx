@@ -116,6 +116,7 @@ export default function Services() {
                         src={service.image}
                         alt={service.title}
                         className="w-full h-full object-cover transition-transform duration-1000 hover:scale-105"
+                        loading="lazy"
                       />
                       <div className="absolute inset-0 bg-slate-900/20"></div>
                     </div>

@@ -52,6 +52,7 @@ export default function About() {
                 src={workspaceImg}
                 alt="Workspace"
                 className="w-full h-auto grayscale hover:grayscale-0 transition-all duration-700"
+                loading="lazy"
               />
               <div className="absolute -bottom-10 -left-10 w-40 h-40 border border-white/5 -z-10 bg-industrial-grid"></div>
             </motion.div>
