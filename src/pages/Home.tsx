@@ -241,8 +241,8 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="industrial-border p-12 md:p-16 rounded-[2rem] flex flex-col md:flex-row items-center justify-between gap-12">
             <div className="max-w-xl">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4 tracking-tight">Mantente a la Vanguardia</h2>
-              <p className="text-slate-400 text-lg">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4 tracking-tight text-white">Mantente a la Vanguardia</h2>
+              <p className="text-slate-300 text-lg">
                 Recibe las últimas noticias sobre automatización industrial, casos de éxito y actualizaciones técnicas directo en tu correo.
               </p>
             </div>
