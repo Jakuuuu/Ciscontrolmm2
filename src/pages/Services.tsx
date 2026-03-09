@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { motion } from 'motion/react';
 import { Settings, Zap, Shield, Network, CheckCircle2, ArrowRight } from 'lucide-react';
 import autoImg from '../assets/service_automation.png';
@@ -151,13 +152,15 @@ export default function Services() {
                     ))}
                   </div>
 
-                  <motion.button
-                    whileHover={{ x: 10 }}
-                    className="mt-12 flex items-center gap-3 text-white text-xs font-bold tracking-[0.2em] uppercase group"
-                  >
-                    Solicitar Información Técnica
-                    <ArrowRight className="w-4 h-4 text-primary" />
-                  </motion.button>
+                  <Link to="/contact">
+                    <motion.button
+                      whileHover={{ x: 10 }}
+                      className="mt-12 flex items-center gap-3 text-white text-xs font-bold tracking-[0.2em] uppercase group"
+                    >
+                      Solicitar Información Técnica
+                      <ArrowRight className="w-4 h-4 text-primary" />
+                    </motion.button>
+                  </Link>
                 </div>
               </motion.div>
             ))}
@@ -177,9 +180,9 @@ export default function Services() {
             Nuestros ingenieros están listos para diseñar la solución que su proyecto necesita.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-6">
-            <a href="/contact" className="px-12 py-5 bg-white text-primary font-bold uppercase tracking-widest hover:bg-slate-900 hover:text-white transition-all shadow-2xl">
+            <Link to="/contact" className="px-12 py-5 bg-white text-primary font-bold uppercase tracking-widest hover:bg-slate-900 hover:text-white transition-all shadow-2xl">
               Consultar con un Experto
-            </a>
+            </Link>
           </div>
         </div>
       </section>
