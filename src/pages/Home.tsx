@@ -89,23 +89,7 @@ export default function Home() {
           ))}
         </div>
 
-        {/* Social Proof Section (Bottom Right) */}
-        <div className="absolute bottom-12 right-8 hidden md:flex items-center gap-4 z-10">
-          <div className="flex -space-x-3">
-            {[1, 2, 3, 4].map((i) => (
-              <img
-                key={i}
-                src={`https://i.pravatar.cc/150?img=${i + 10}`}
-                alt="Client"
-                className="w-10 h-10 rounded-full border-2 border-background-dark object-cover"
-              />
-            ))}
-          </div>
-          <div className="flex flex-col">
-            <span className="text-[10px] font-bold text-white uppercase tracking-widest">Confianza Global</span>
-            <span className="text-[9px] text-slate-400 uppercase tracking-tighter font-medium">+20K PROFESIONALES CONFÍAN EN NOSOTROS</span>
-          </div>
-        </div>
+
       </section>
 
 
