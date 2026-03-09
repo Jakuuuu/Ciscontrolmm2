@@ -39,7 +39,7 @@
   }
 
   .btn-premium {
-    @apply relative inline-flex items-center px-8 py-3 overflow-hidden font-bold tracking-tight text-white transition-all duration-300 border-2 border-primary rounded-full hover:bg-primary hover:shadow-[0_0_20px_rgba(200, 16, 46, 0.4)];
+    @apply relative inline-flex items-center px-8 py-3 overflow-hidden font-bold tracking-tight text-white transition-all duration-300 border-2 border-primary rounded-full hover:bg-primary hover:shadow-[0_0_20px_rgba(200,16,46,0.4)];
   }
 }
 

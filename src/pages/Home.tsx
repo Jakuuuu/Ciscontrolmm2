@@ -217,7 +217,7 @@ export default function Home() {
             <div className="p-6 rounded-lg bg-white/5 backdrop-blur border border-white/10 hover:bg-white/10 transition-colors">
               <div className="text-5xl md:text-6xl font-extrabold mb-2">150+</div>
               <div className="h-1 w-12 bg-white/50 mx-auto mb-4 rounded-full"></div>
-              <p className="text-lg font-medium text-blue-100 uppercase tracking-wide">Proyectos Importantes</p>
+              <p className="text-lg font-medium text-blue-100 uppercase tracking-wide">Algunos proyectos</p>
             </div>
           </div>
           <div className="mt-16 text-center">

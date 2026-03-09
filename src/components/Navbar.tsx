@@ -25,7 +25,7 @@ export default function Navbar() {
     { name: 'Inicio', path: '/' },
     { name: 'Nosotros', path: '/about' },
     { name: 'Servicios', path: '/services' },
-    { name: 'Proyectos', path: '/projects' },
+    { name: 'Algunos proyectos', path: '/projects' },
   ];
 
   const isActive = (path: string) => location.pathname === path;
@@ -63,7 +63,7 @@ export default function Navbar() {
                 ['INICIO', '/'],
                 ['NOSOTROS', '/about'],
                 ['SERVICIOS', '/services'],
-                ['PROYECTOS', '/projects']
+                ['ALGUNOS PROYECTOS', '/projects']
               ].map(([name, path]) => (
                 <Link
                   key={name}
