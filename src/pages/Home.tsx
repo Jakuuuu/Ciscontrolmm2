@@ -35,25 +35,25 @@ export default function Home() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-white tracking-tighter leading-[0.85] mb-8 [text-shadow:_0_4px_8px_rgba(0,0,0,0.5)]">
+              <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-black text-white tracking-tighter leading-[0.85] mb-8 [text-shadow:_0_4px_8px_rgba(0,0,0,0.5)]">
                 Ingeniería que <br />
                 <span className="text-white">Evoluciona</span>
               </h1>
 
-              <p className="text-lg md:text-xl text-white/90 font-medium mb-10 max-w-xl leading-relaxed [text-shadow:_0_2px_4px_rgba(0,0,0,0.8)]">
+              <p className="text-base sm:text-lg md:text-xl text-white/90 font-medium mb-10 max-w-xl leading-relaxed [text-shadow:_0_2px_4px_rgba(0,0,0,0.8)]">
                 Como socios estratégicos, guiamos a la industria en su transición hacia sistemas de energía y automatización más eficientes y sostenibles.
               </p>
 
-              <div className="flex flex-col sm:flex-row gap-4 mb-20">
+              <div className="flex flex-col sm:flex-row gap-4 mb-16 md:mb-20">
                 <Link
                   to="/services"
-                  className="px-10 py-4 bg-white text-slate-900 text-sm font-bold uppercase tracking-widest hover:bg-primary hover:text-white transition-all duration-300 shadow-xl"
+                  className="px-8 sm:px-10 py-4 bg-white text-slate-900 text-xs sm:text-sm font-bold uppercase tracking-widest hover:bg-primary hover:text-white transition-all duration-300 shadow-xl text-center"
                 >
                   Explorar soluciones
                 </Link>
                 <Link
                   to="/contact"
-                  className="px-10 py-4 border border-white/30 text-white text-sm font-bold uppercase tracking-widest hover:bg-white/10 transition-all duration-300 backdrop-blur-sm"
+                  className="px-8 sm:px-10 py-4 border border-white/30 text-white text-xs sm:text-sm font-bold uppercase tracking-widest hover:bg-white/10 transition-all duration-300 backdrop-blur-sm text-center"
                 >
                   Agendar llamada
                 </Link>
@@ -65,15 +65,15 @@ export default function Home() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="grid grid-cols-1 sm:grid-cols-2 gap-8 pt-12 border-t border-white/10"
+              className="grid grid-cols-2 gap-6 md:gap-8 pt-10 md:pt-12 border-t border-white/10"
             >
               <div className="flex flex-col">
-                <span className="text-4xl font-bold text-white mb-1">20+</span>
-                <span className="text-xs uppercase tracking-widest text-slate-400 font-semibold">Años de experiencia técnica</span>
+                <span className="text-3xl md:text-4xl font-bold text-white mb-1">20+</span>
+                <span className="text-[10px] uppercase tracking-widest text-slate-400 font-semibold">Años técnicos</span>
               </div>
               <div className="flex flex-col">
-                <span className="text-4xl font-bold text-white mb-1">150+</span>
-                <span className="text-xs uppercase tracking-widest text-slate-400 font-semibold">Proyectos industriales entregados</span>
+                <span className="text-3xl md:text-4xl font-bold text-white mb-1">150+</span>
+                <span className="text-[10px] uppercase tracking-widest text-slate-400 font-semibold">Proyectos</span>
               </div>
             </motion.div>
           </div>
@@ -94,13 +94,13 @@ export default function Home() {
 
 
       {/* Services Grid (Pilares) */}
-      <section className="py-32 bg-background-dark relative overflow-hidden" id="services">
+      <section className="py-20 md:py-32 bg-background-dark relative overflow-hidden" id="services">
         <div className="absolute inset-0 industrial-grid opacity-10"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="flex flex-col md:flex-row justify-between items-end mb-24 gap-8">
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 md:mb-24 gap-8">
             <div className="max-w-2xl">
               <span className="text-[10px] font-bold tracking-[0.5em] uppercase text-primary mb-4 block">Nuestras Capacidades</span>
-              <h2 className="text-5xl md:text-6xl font-black text-white tracking-tighter leading-none">
+              <h2 className="text-4xl md:text-6xl font-black text-white tracking-tighter leading-none">
                 Soluciones de <br /> <span className="text-slate-400">Ingeniería Crítica</span>
               </h2>
             </div>
@@ -113,15 +113,15 @@ export default function Home() {
             {/* Electricity - Square */}
             <motion.div
               whileHover={{ y: -10 }}
-              className="md:col-span-4 group relative overflow-hidden bg-slate-800 aspect-square"
+              className="md:col-span-6 lg:col-span-4 group relative overflow-hidden bg-slate-800 aspect-square"
             >
               <img src={elecImg} alt="Electricidad" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-70 group-hover:opacity-100" loading="lazy" />
               <div className="absolute inset-0 bg-gradient-to-t from-background-dark via-background-dark/20 to-transparent"></div>
-              <div className="absolute bottom-10 left-10">
-                <h3 className="text-2xl font-bold text-white mb-2">Electricidad</h3>
-                <p className="text-slate-400 text-sm leading-relaxed mb-6">Ingeniería eléctrica de alta y media tensión.</p>
-                <Link to="/services" className="inline-flex items-center gap-2 text-xs font-bold tracking-widest uppercase text-white hover:text-primary transition-colors">
-                  Saber más <span className="w-8 h-[1px] bg-primary"></span>
+              <div className="absolute bottom-6 md:bottom-10 left-6 md:left-10 right-6 md:right-10">
+                <h3 className="text-xl md:text-2xl font-bold text-white mb-2">Electricidad</h3>
+                <p className="text-slate-400 text-xs md:text-sm leading-relaxed mb-6">Ingeniería eléctrica de alta y media tensión.</p>
+                <Link to="/services" className="inline-flex items-center gap-2 text-[10px] md:text-xs font-bold tracking-widest uppercase text-white hover:text-primary transition-colors">
+                  Saber más <span className="w-6 md:w-8 h-[1px] bg-primary"></span>
                 </Link>
               </div>
             </motion.div>
@@ -129,15 +129,15 @@ export default function Home() {
             {/* DDCE - Square */}
             <motion.div
               whileHover={{ y: -10 }}
-              className="md:col-span-4 group relative overflow-hidden bg-slate-800 aspect-square"
+              className="md:col-span-6 lg:col-span-4 group relative overflow-hidden bg-slate-800 aspect-square"
             >
               <img src={ddcImg} alt="DDCE" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-70 group-hover:opacity-100" loading="lazy" />
               <div className="absolute inset-0 bg-gradient-to-t from-background-dark via-background-dark/20 to-transparent"></div>
-              <div className="absolute bottom-10 left-10">
-                <h3 className="text-2xl font-bold text-white mb-2">DDCE</h3>
-                <p className="text-slate-400 text-sm leading-relaxed mb-6">Protección avanzada de infraestructuras críticas.</p>
-                <Link to="/services" className="inline-flex items-center gap-2 text-xs font-bold tracking-widest uppercase text-white hover:text-primary transition-colors">
-                  Saber más <span className="w-8 h-[1px] bg-primary"></span>
+              <div className="absolute bottom-6 md:bottom-10 left-6 md:left-10 right-6 md:right-10">
+                <h3 className="text-xl md:text-2xl font-bold text-white mb-2">DDCE</h3>
+                <p className="text-slate-400 text-xs md:text-sm leading-relaxed mb-6">Protección avanzada de infraestructuras críticas.</p>
+                <Link to="/services" className="inline-flex items-center gap-2 text-[10px] md:text-xs font-bold tracking-widest uppercase text-white hover:text-primary transition-colors">
+                  Saber más <span className="w-6 md:w-8 h-[1px] bg-primary"></span>
                 </Link>
               </div>
             </motion.div>
@@ -145,15 +145,15 @@ export default function Home() {
             {/* Fibra - Square */}
             <motion.div
               whileHover={{ y: -10 }}
-              className="md:col-span-4 group relative overflow-hidden bg-slate-800 aspect-square"
+              className="md:col-span-6 lg:col-span-4 group relative overflow-hidden bg-slate-800 aspect-square"
             >
               <img src={fibraImg} alt="Fibra Comunicación" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-70 group-hover:opacity-100" loading="lazy" />
               <div className="absolute inset-0 bg-gradient-to-t from-background-dark via-background-dark/20 to-transparent"></div>
-              <div className="absolute bottom-10 left-10">
-                <h3 className="text-2xl font-bold text-white mb-2">Comunicaciones Ópticas</h3>
-                <p className="text-slate-400 text-sm leading-relaxed mb-6">Infraestructura de red robusta para entornos industriales.</p>
-                <Link to="/services" className="inline-flex items-center gap-2 text-xs font-bold tracking-widest uppercase text-white hover:text-primary transition-colors">
-                  Saber más <span className="w-8 h-[1px] bg-primary"></span>
+              <div className="absolute bottom-6 md:bottom-10 left-6 md:left-10 right-6 md:right-10">
+                <h3 className="text-xl md:text-2xl font-bold text-white mb-2">Comunicaciones Ópticas</h3>
+                <p className="text-slate-400 text-xs md:text-sm leading-relaxed mb-6">Infraestructura de red robusta para entornos industriales.</p>
+                <Link to="/services" className="inline-flex items-center gap-2 text-[10px] md:text-xs font-bold tracking-widest uppercase text-white hover:text-primary transition-colors">
+                  Saber más <span className="w-6 md:w-8 h-[1px] bg-primary"></span>
                 </Link>
               </div>
             </motion.div>
@@ -161,15 +161,15 @@ export default function Home() {
             {/* Automation - Large */}
             <motion.div
               whileHover={{ y: -10 }}
-              className="md:col-span-8 group relative overflow-hidden bg-slate-800 aspect-[16/9]"
+              className="md:col-span-12 lg:col-span-8 group relative overflow-hidden bg-slate-800 aspect-[4/3] md:aspect-[16/9]"
             >
               <img src={autoImg} alt="Automatización" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-70 group-hover:opacity-100" loading="lazy" />
               <div className="absolute inset-0 bg-gradient-to-t from-background-dark via-background-dark/20 to-transparent"></div>
-              <div className="absolute bottom-10 left-10">
-                <h3 className="text-3xl font-bold text-white mb-2">Automatización Industrial</h3>
-                <p className="text-slate-400 max-w-md text-sm leading-relaxed mb-6 italic">Sistemas PLC, SCADA y optimización de procesos mediante tecnología de vanguardia.</p>
-                <Link to="/services#automation" className="inline-flex items-center gap-2 text-xs font-bold tracking-widest uppercase text-white hover:text-primary transition-colors">
-                  Explorar detalles <span className="w-8 h-[1px] bg-primary"></span>
+              <div className="absolute bottom-6 md:bottom-10 left-6 md:left-10 right-6 md:right-10">
+                <h3 className="text-2xl md:text-3xl font-bold text-white mb-2">Automatización Industrial</h3>
+                <p className="text-slate-400 max-w-md text-xs md:text-sm leading-relaxed mb-6 italic">Sistemas PLC, SCADA y optimización de procesos mediante tecnología de vanguardia.</p>
+                <Link to="/services#automation" className="inline-flex items-center gap-2 text-[10px] md:text-xs font-bold tracking-widest uppercase text-white hover:text-primary transition-colors">
+                  Explorar detalles <span className="w-6 md:w-8 h-[1px] bg-primary"></span>
                 </Link>
               </div>
             </motion.div>
@@ -177,15 +177,15 @@ export default function Home() {
             {/* Corrosion - Square */}
             <motion.div
               whileHover={{ y: -10 }}
-              className="md:col-span-4 group relative overflow-hidden bg-slate-800 aspect-square"
+              className="md:col-span-6 lg:col-span-4 group relative overflow-hidden bg-slate-800 aspect-square"
             >
               <img src={corrosionImg} alt="Sistemas de Corrosión" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-70 group-hover:opacity-100" loading="lazy" />
               <div className="absolute inset-0 bg-gradient-to-t from-background-dark via-background-dark/20 to-transparent"></div>
-              <div className="absolute bottom-10 left-10">
-                <h3 className="text-2xl font-bold text-white mb-2">Sistemas de Corrosión</h3>
-                <p className="text-slate-400 text-sm leading-relaxed mb-6">Protección galvánica y monitoreo de integridad.</p>
-                <Link to="/services" className="inline-flex items-center gap-2 text-xs font-bold tracking-widest uppercase text-white hover:text-primary transition-colors">
-                  Saber más <span className="w-8 h-[1px] bg-primary"></span>
+              <div className="absolute bottom-6 md:bottom-10 left-6 md:left-10 right-6 md:right-10">
+                <h3 className="text-xl md:text-2xl font-bold text-white mb-2">Sistemas de Corrosión</h3>
+                <p className="text-slate-400 text-xs md:text-sm leading-relaxed mb-6">Protección galvánica y monitoreo de integridad.</p>
+                <Link to="/services" className="inline-flex items-center gap-2 text-[10px] md:text-xs font-bold tracking-widest uppercase text-white hover:text-primary transition-colors">
+                  Saber más <span className="w-6 md:w-8 h-[1px] bg-primary"></span>
                 </Link>
               </div>
             </motion.div>

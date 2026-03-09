@@ -96,26 +96,28 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden bg-white border-t border-slate-100 absolute w-full shadow-xl">
-          <div className="px-4 pt-2 pb-6 space-y-1">
+        <div className="md:hidden bg-background-dark/95 backdrop-blur-xl border-t border-white/5 absolute w-full shadow-2xl h-screen">
+          <div className="px-6 pt-10 pb-10 space-y-4">
             {navLinks.map((link) => (
               <Link
                 key={link.path}
                 to={link.path}
-                className={`block px-3 py-3 rounded-md text-base font-medium ${isActive(link.path)
-                  ? 'bg-primary/5 text-primary'
-                  : 'text-slate-600 hover:bg-slate-50 hover:text-primary'
+                className={`block px-4 py-4 text-xl font-black tracking-tighter uppercase transition-all ${isActive(link.path)
+                  ? 'text-primary border-l-4 border-primary pl-6'
+                  : 'text-slate-400 hover:text-white hover:pl-6'
                   }`}
               >
                 {link.name}
               </Link>
             ))}
-            <Link
-              to="/contact"
-              className="block w-full text-center mt-4 bg-primary text-white px-5 py-3 rounded-lg text-base font-semibold shadow-md"
-            >
-              Contáctanos
-            </Link>
+            <div className="pt-8 px-4">
+              <Link
+                to="/contact"
+                className="block w-full text-center bg-primary text-white px-8 py-5 text-sm font-black uppercase tracking-[0.3em] shadow-2xl transition-transform active:scale-95"
+              >
+                Contáctanos
+              </Link>
+            </div>
           </div>
         </div>
       )}

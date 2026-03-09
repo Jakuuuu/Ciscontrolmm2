@@ -73,7 +73,7 @@ export default function Services() {
   return (
     <div className="bg-background-dark min-h-screen">
       {/* Premium Hero */}
-      <section className="relative pt-40 pb-32 overflow-hidden">
+      <section className="relative pt-32 md:pt-40 pb-20 md:pb-32 overflow-hidden">
         <div className="absolute inset-0 industrial-grid opacity-20"></div>
         <div className="absolute top-0 right-0 w-1/2 h-full bg-primary/5 blur-[120px] rounded-full"></div>
 
@@ -85,10 +85,10 @@ export default function Services() {
             className="max-w-4xl"
           >
             <span className="text-[10px] font-bold tracking-[0.5em] uppercase text-primary mb-6 block">Nuestras Soluciones</span>
-            <h1 className="text-6xl md:text-8xl font-black text-white tracking-tighter leading-none mb-8">
+            <h1 className="text-4xl sm:text-6xl md:text-8xl font-black text-white tracking-tighter leading-none mb-8">
               Ingeniería de <br /> <span className="text-slate-500">Alto Rendimiento</span>
             </h1>
-            <p className="text-xl text-slate-400 max-w-2xl leading-relaxed">
+            <p className="text-lg md:text-xl text-slate-400 max-w-2xl leading-relaxed">
               Transformamos desafíos industriales complejos en sistemas eficientes, seguros y tecnológicamente avanzados.
             </p>
           </motion.div>
@@ -98,7 +98,7 @@ export default function Services() {
       {/* Services List - Premium Grid */}
       <section className="pb-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="space-y-40">
+          <div className="space-y-24 md:space-y-40">
             {services.map((service, index) => (
               <motion.div
                 key={service.id}
@@ -107,7 +107,7 @@ export default function Services() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.8 }}
-                className={`flex flex-col ${index % 2 === 1 ? 'lg:flex-row-reverse' : 'lg:flex-row'} gap-16 items-center`}
+                className={`flex flex-col ${index % 2 === 1 ? 'lg:flex-row-reverse' : 'lg:flex-row'} gap-10 md:gap-16 items-center`}
               >
                 {/* Visual Side */}
                 <div className="w-full lg:w-3/5">
@@ -122,7 +122,7 @@ export default function Services() {
                       <div className="absolute inset-0 bg-slate-900/20"></div>
                     </div>
                     {/* Decorative element */}
-                    <div className={`absolute -bottom-6 ${index % 2 === 0 ? '-right-6' : '-left-6'} w-32 h-32 border border-white/5 -z-10`}></div>
+                    <div className={`absolute -bottom-6 ${index % 2 === 0 ? '-right-6' : '-left-6'} w-32 h-32 border border-white/5 -z-10 hidden sm:block`}></div>
                   </div>
                 </div>
 
@@ -135,11 +135,11 @@ export default function Services() {
                     <div className="h-[1px] flex-grow bg-white/10"></div>
                   </div>
 
-                  <h2 className="text-4xl font-bold text-white mb-6 tracking-tight">
+                  <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 tracking-tight">
                     {service.title}
                   </h2>
 
-                  <p className="text-lg text-slate-400 mb-10 leading-relaxed italic border-l-2 border-primary pl-6">
+                  <p className="text-base md:text-lg text-slate-400 mb-10 leading-relaxed italic border-l-2 border-primary pl-6">
                     {service.description}
                   </p>
 

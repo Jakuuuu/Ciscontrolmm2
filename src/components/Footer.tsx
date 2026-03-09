@@ -7,7 +7,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
           {/* Brand */}
-          <div className="col-span-1 md:col-span-2">
+          <div className="col-span-1 lg:col-span-2">
             <div className="flex items-center gap-2 mb-6">
               <Logo theme="light" />
             </div>
@@ -28,8 +28,8 @@ export default function Footer() {
           </div>
 
           {/* Links */}
-          <div>
-            <h4 className="text-white font-bold uppercase text-sm tracking-wider mb-6">Servicios</h4>
+          <div className="md:border-l md:border-white/5 md:pl-8">
+            <h4 className="text-white font-bold uppercase text-sm tracking-widest mb-6">Servicios</h4>
             <ul className="space-y-3 text-sm">
               <li><Link to="/services" className="hover:text-primary transition-colors">Automatización</Link></li>
               <li><Link to="/services" className="hover:text-primary transition-colors">Electricidad Industrial</Link></li>
@@ -39,15 +39,12 @@ export default function Footer() {
           </div>
 
           {/* Contact */}
-          <div>
-            <h4 className="text-white font-bold uppercase text-sm tracking-wider mb-6">Contacto</h4>
-            <div className="mb-6">
-              <Logo theme="light" />
-            </div>
-            <ul className="space-y-3 text-sm">
+          <div className="md:border-l md:border-white/5 md:pl-8">
+            <h4 className="text-white font-bold uppercase text-sm tracking-widest mb-6 border-b border-primary w-fit pb-1">Contacto</h4>
+            <ul className="space-y-4 text-sm mt-6">
               <li className="flex items-start gap-3">
                 <span className="material-icons text-primary text-base mt-0.5">location_on</span>
-                <span>Zona Industrial<br />Valencia, Venezuela</span>
+                <span className="leading-tight">Zona Industrial<br />Valencia, Venezuela</span>
               </li>
               <li className="flex items-center gap-3">
                 <span className="material-icons text-primary text-base">phone</span>

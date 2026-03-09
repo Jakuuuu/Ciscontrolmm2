@@ -83,7 +83,7 @@ export default function Projects() {
   return (
     <div className="bg-background-dark min-h-screen">
       {/* Header Section */}
-      <section className="relative pt-40 pb-20 border-b border-white/5">
+      <section className="relative pt-32 md:pt-40 pb-16 md:pb-20 border-b border-white/5">
         <div className="absolute inset-0 industrial-grid opacity-20"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div
@@ -92,10 +92,10 @@ export default function Projects() {
             className="text-left"
           >
             <span className="text-[10px] font-bold tracking-[0.5em] uppercase text-primary mb-6 block">Casos de Éxito</span>
-            <h1 className="text-5xl md:text-7xl font-black text-white tracking-tighter leading-none mb-8">
+            <h1 className="text-4xl sm:text-6xl md:text-7xl font-black text-white tracking-tighter leading-none mb-8">
               Estos son algunos de <br /> <span className="text-slate-500">nuestros proyectos</span>
             </h1>
-            <p className="text-xl text-slate-400 max-w-2xl leading-relaxed">
+            <p className="text-lg md:text-xl text-slate-400 max-w-2xl leading-relaxed">
               Soluciones de ingeniería de alto impacto ejecutadas bajo los más rigurosos estándares internacionales de calidad y seguridad.
             </p>
           </motion.div>
@@ -104,17 +104,17 @@ export default function Projects() {
 
       {/* Filter Bar */}
       <section className="bg-white/5 backdrop-blur-md sticky top-20 z-30 border-b border-white/5">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-          <div className="flex flex-wrap items-center gap-4">
-            <div className="flex items-center gap-2 text-primary mr-4">
-              <Filter size={16} />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 md:py-6">
+          <div className="flex flex-wrap items-center gap-3 md:gap-4 overflow-x-auto no-scrollbar">
+            <div className="flex items-center gap-2 text-primary mr-2 md:mr-4 shrink-0">
+              <Filter size={14} />
               <span className="text-[10px] font-bold uppercase tracking-widest">Filtrar</span>
             </div>
             {categories.map(cat => (
               <button
                 key={cat.id}
                 onClick={() => setFilter(cat.id)}
-                className={`px-6 py-2 border text-[10px] font-bold uppercase tracking-widest transition-all ${filter === cat.id
+                className={`px-4 md:px-6 py-2 border text-[10px] font-bold uppercase tracking-widest transition-all shrink-0 ${filter === cat.id
                   ? 'bg-primary border-primary text-white shadow-[0_0_20px_rgba(255,102,0,0.3)]'
                   : 'border-white/10 text-slate-400 hover:border-primary/50 hover:text-white'
                   }`}
