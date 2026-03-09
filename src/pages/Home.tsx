@@ -69,7 +69,7 @@ export default function Home() {
             >
               <div className="flex flex-col">
                 <span className="text-3xl md:text-4xl font-bold text-white mb-1">20+</span>
-                <span className="text-[10px] uppercase tracking-widest text-slate-400 font-semibold">Años técnicos</span>
+                <span className="text-[10px] uppercase tracking-widest text-slate-400 font-semibold">Años de experiencia</span>
               </div>
               <div className="flex flex-col">
                 <span className="text-3xl md:text-4xl font-bold text-white mb-1">150+</span>
