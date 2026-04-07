@@ -1,6 +1,6 @@
 import { motion } from 'motion/react';
 import { Target, Eye, ShieldCheck, Lightbulb, Users, Award } from 'lucide-react';
-import workspaceImg from '../assets/Nosotros.jpg';
+import workspaceImg from '../assets/Nosotros.jpeg';
 
 export default function About() {
   const values = [
