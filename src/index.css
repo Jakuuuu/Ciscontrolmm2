@@ -1,13 +1,27 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #C8102E;
-  --color-primary-dark: #9B0C23;
-  --color-primary-light: #FFF0F2;
-  --color-background-light: #f6f6f8;
-  --color-background-dark: #101622;
-  --color-neutral-dark: #1e2433;
-  --color-neutral-light: #ffe0e2;
+  /* Paleta Corporativa y Tecnológica (Anti-Extremos) */
+  --color-primary: #1C3B70;
+  --color-primary-dark: #0f1e3a;
+  --color-primary-light: #e6f0ff;
+  
+  --color-accent-lightning: #00D2FF;
+
+  /* Superficies y Textos Principales */
+  --color-bg-light: #F8FAFC; 
+  --color-bg-ivory: #FDFDF9;
+  --color-bg-dark: #0B132B;
+  --color-bg-dark-elem: #1E293B;
+  
+  --color-text-light: #F1F5F9;
+  --color-text-dark: #0F172A;
+
+  /* Mapeo de tokens legacy a nueva paleta */
+  --color-background-light: var(--color-bg-light);
+  --color-background-dark: var(--color-bg-dark);
+  --color-neutral-dark: var(--color-bg-dark-elem);
+  --color-neutral-light: var(--color-text-light);
 
   --font-display: "Inter", sans-serif;
 
@@ -19,7 +33,7 @@
 @layer base {
   body {
     font-family: var(--font-display);
-    @apply bg-slate-50 text-slate-900 antialiased selection:bg-primary/30;
+    @apply bg-bg-light text-text-dark antialiased selection:bg-primary/30;
     font-feature-settings: "cv02", "cv03", "cv04", "cv11";
   }
 }

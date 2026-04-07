@@ -1,0 +1,42 @@
+/* 
+ * CIS CONTROL, C.A. - Pruebas de Paleta Corporativa
+ * Ubicación: /active/ui-experiments/theme-test.css
+ * Regla: Aislamiento del Experimento y Prohibición de Extremos (#FFF y #000).
+ */
+
+:root {
+  /* =========================================================
+     1. Fondos y Superficies Claras (Anti-Blanco Puro)
+     ========================================================= */
+  /* Off-white con elegante tinción fría (para Slider 3 Invertido) */
+  --color-bg-light: #F8FAFC; 
+  /* Falla de back-up más cálido tipo hueso por si el primer tono no ajusta al entorno solar */
+  --color-bg-ivory: #FDFDF9; 
+
+  /* =========================================================
+     2. Textos Oscuros para fondos Claros (Alta Legibilidad)
+     ========================================================= */
+  /* Carbón profundo usado sobre superficies 'off-white' */
+  --color-text-dark: #0F172A;
+
+  /* =========================================================
+     3. Fondos y Superficies Oscuras (Anti-Negro Puro)
+     ========================================================= */
+  /* Azul Noche Profundo. Tecnológico pero sobrio. */
+  --color-bg-dark: #0B132B;
+  /* Gris Carbón Oscuro para contrastar contra el azul oscuro de ser necesario */
+  --color-bg-dark-elem: #1E293B;
+
+  /* =========================================================
+     4. Textos Claros para fondos Oscuros 
+     ========================================================= */
+  --color-text-light: #F1F5F9;
+
+  /* =========================================================
+     5. Acentos y Distintivos
+     ========================================================= */
+  /* Cyan Eléctrico. Combina perfectamente con la animación del Relámpago DDCE del Slider 1 */
+  --color-accent-lightning: #00D2FF;
+  /* Azul Corporativo Ingeniería en casos formales o para acentuar sobre fondos claros (#F8FAFC) */
+  --color-primary: #1C3B70;
+}
