@@ -27,23 +27,23 @@ export default function Home() {
           <div className="absolute inset-0 bg-gradient-to-t from-slate-50 via-transparent to-transparent opacity-90"></div>
         </div>
 
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-32 pb-20 lg:pt-40 lg:pb-32">
-          <div className="max-w-3xl">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-32 pb-20 lg:pt-40 lg:pb-32 flex flex-col items-center justify-center text-center">
+          <div className="max-w-4xl">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white tracking-tighter leading-[0.85] mb-8 drop-shadow-lg">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl font-black text-white tracking-tighter leading-[0.85] mb-8 drop-shadow-lg">
                 Trayectoria sólida, <br />
                 <span className="text-primary">misión renovada</span>
               </h1>
 
-              <p className="text-base sm:text-lg md:text-xl text-slate-200 font-medium mb-10 max-w-xl leading-relaxed drop-shadow-md">
+              <p className="text-base sm:text-lg md:text-xl text-slate-200 font-medium mb-10 mx-auto max-w-2xl leading-relaxed drop-shadow-md">
                 Como socios estratégicos, guiamos a la industria en su transición hacia sistemas de energía y automatización más eficientes y sostenibles.
               </p>
 
-              <div className="flex flex-col sm:flex-row justify-start gap-4 mb-16 md:mb-20">
+              <div className="flex flex-col sm:flex-row justify-center gap-6 mb-16 md:mb-20">
                 <Link
                   to="/services"
                   className="px-8 sm:px-10 py-4 bg-primary text-white text-xs sm:text-sm font-bold uppercase tracking-widest hover:bg-primary/90 transition-all duration-300 shadow-xl text-center"
