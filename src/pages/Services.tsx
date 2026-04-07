@@ -26,9 +26,9 @@ export default function Services() {
     },
     {
       id: 'ddce',
-      title: 'Desionizador de cargas electromagnéticas (DDCE)',
+      title: 'Deionizador de cargas electromagnéticas (DDCE)',
       icon: <ShieldAlert className="w-6 h-6" />,
-      description: 'Protección avanzada y continua de infraestructuras críticas contra descargas atmosféricas mediante tecnología de desionización.',
+      description: 'Protección avanzada y continua de infraestructuras críticas contra descargas atmosféricas mediante tecnología de deionización.',
       features: [
         'Prevención de formación de rayos',
         'Protección de equipos electrónicos sensibles',
