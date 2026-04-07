@@ -5,25 +5,19 @@ import ddcImg from '../assets/ddce_real.jpg';
 import fibraImg from '../assets/fibra.png';
 import autoImg from '../assets/automatizacion.png';
 import corrosionImg from '../assets/corrosion.png';
-import heroImg from '../assets/Portada.jpg';
 
 export default function Home() {
   return (
     <div className="overflow-x-hidden bg-slate-50">
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center overflow-hidden">
-        {/* Background Image */}
-        <div className="absolute inset-0 z-0">
-          <img
-            alt="CIS CONTROL Portada Industrial"
-            className="w-full h-full object-cover"
-            src={heroImg}
-            loading="eager"
-            fetchPriority="high"
-          />
-          {/* Enhanced Overlay for light readability */}
-          <div className="absolute inset-0 bg-black/50 transition-all"></div>
-          <div className="absolute inset-0 bg-gradient-to-r from-slate-900/80 via-slate-900/40 to-transparent"></div>
+        {/* Premium Corporate Dark Background */}
+        <div className="absolute inset-0 z-0 bg-slate-900">
+          {/* Linear gradient using corporate primary color */}
+          <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-primary/80 to-slate-900"></div>
+          {/* Subtle radial glow in the center */}
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-white/5 via-transparent to-transparent"></div>
+          {/* Fade into the light theme section below */}
           <div className="absolute inset-0 bg-gradient-to-t from-slate-50 via-transparent to-transparent opacity-90"></div>
         </div>
 
