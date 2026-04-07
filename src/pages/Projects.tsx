@@ -81,10 +81,10 @@ export default function Projects() {
   ];
 
   return (
-    <div className="bg-background-dark min-h-screen">
+    <div className="bg-slate-50 min-h-screen">
       {/* Header Section */}
-      <section className="relative pt-32 md:pt-40 pb-16 md:pb-20 border-b border-white/5">
-        <div className="absolute inset-0 industrial-grid opacity-20"></div>
+      <section className="relative pt-32 md:pt-40 pb-16 md:pb-20 border-b border-slate-200">
+        <div className="absolute inset-0 industrial-grid opacity-30"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -92,10 +92,10 @@ export default function Projects() {
             className="text-left"
           >
             <span className="text-[10px] font-bold tracking-[0.5em] uppercase text-primary mb-6 block">Casos de Éxito</span>
-            <h1 className="text-4xl sm:text-6xl md:text-7xl font-black text-white tracking-tighter leading-none mb-8">
+            <h1 className="text-4xl sm:text-6xl md:text-7xl font-black text-slate-900 tracking-tighter leading-none mb-8">
               Estos son algunos de <br /> <span className="text-slate-500">nuestros proyectos</span>
             </h1>
-            <p className="text-lg md:text-xl text-slate-400 max-w-2xl leading-relaxed">
+            <p className="text-lg md:text-xl text-slate-600 max-w-2xl leading-relaxed">
               Soluciones de ingeniería de alto impacto ejecutadas bajo los más rigurosos estándares internacionales de calidad y seguridad.
             </p>
           </motion.div>
@@ -103,7 +103,7 @@ export default function Projects() {
       </section>
 
       {/* Filter Bar */}
-      <section className="bg-white/5 backdrop-blur-md sticky top-20 z-30 border-b border-white/5">
+      <section className="bg-white/80 backdrop-blur-md sticky top-20 z-30 border-b border-slate-200 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 md:py-6">
           <div className="flex flex-wrap items-center gap-3 md:gap-4 overflow-x-auto no-scrollbar">
             <div className="flex items-center gap-2 text-primary mr-2 md:mr-4 shrink-0">
@@ -115,8 +115,8 @@ export default function Projects() {
                 key={cat.id}
                 onClick={() => setFilter(cat.id)}
                 className={`px-4 md:px-6 py-2 border text-[10px] font-bold uppercase tracking-widest transition-all shrink-0 ${filter === cat.id
-                  ? 'bg-primary border-primary text-white shadow-[0_0_20px_rgba(255,102,0,0.3)]'
-                  : 'border-white/10 text-slate-400 hover:border-primary/50 hover:text-white'
+                  ? 'bg-primary border-primary text-white shadow-[0_0_15px_rgba(200,16,46,0.2)]'
+                  : 'border-slate-300 text-slate-600 hover:border-primary/50 hover:text-primary bg-white'
                   }`}
               >
                 {cat.label}
@@ -131,7 +131,7 @@ export default function Projects() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             layout
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-1"
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
           >
             <AnimatePresence mode="popLayout">
               {filteredProjects.map(project => (
@@ -141,17 +141,17 @@ export default function Projects() {
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
                   key={project.id}
-                  className="bg-white/5 border border-white/5 group relative overflow-hidden flex flex-col"
+                  className="bg-white border border-slate-200 shadow-lg group relative overflow-hidden flex flex-col"
                 >
                   <div className="aspect-video overflow-hidden relative">
-                    <div className="absolute inset-0 bg-background-dark/40 group-hover:bg-transparent transition-colors z-10"></div>
+                    <div className="absolute inset-0 bg-slate-900/10 group-hover:bg-transparent transition-colors z-10"></div>
                     <img
                       src={project.image}
                       alt={project.title}
                       className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
                     />
                     <div className="absolute bottom-0 left-0 p-4 z-20">
-                      <span className="bg-primary text-white text-[10px] font-bold px-3 py-1 uppercase tracking-widest">
+                      <span className="bg-primary text-white text-[10px] font-bold px-3 py-1 uppercase tracking-widest shadow-md">
                         {project.category}
                       </span>
                     </div>
@@ -159,28 +159,28 @@ export default function Projects() {
 
                   <div className="p-8 flex flex-col flex-grow">
                     <div className="flex justify-between items-start mb-4">
-                      <h3 className="text-xl font-bold text-white tracking-tight leading-tight group-hover:text-primary transition-colors">
+                      <h3 className="text-xl font-bold text-slate-900 tracking-tight leading-tight group-hover:text-primary transition-colors">
                         {project.title}
                       </h3>
-                      <ExternalLink size={16} className="text-white/20 group-hover:text-primary transition-colors" />
+                      <ExternalLink size={16} className="text-slate-400 group-hover:text-primary transition-colors shrink-0 ml-2" />
                     </div>
 
                     <div className="grid grid-cols-2 gap-4 mb-6">
-                      <div className="flex items-center gap-2 text-slate-500">
+                      <div className="flex items-center gap-2 text-slate-600">
                         <Building2 size={12} className="text-primary" />
                         <span className="text-[10px] uppercase font-bold tracking-wider">{project.client}</span>
                       </div>
-                      <div className="flex items-center gap-2 text-slate-500">
+                      <div className="flex items-center gap-2 text-slate-600">
                         <MapPin size={12} className="text-primary" />
                         <span className="text-[10px] uppercase font-bold tracking-wider">{project.location}</span>
                       </div>
-                      <div className="flex items-center gap-2 text-slate-500">
+                      <div className="flex items-center gap-2 text-slate-600">
                         <Calendar size={12} className="text-primary" />
                         <span className="text-[10px] uppercase font-bold tracking-wider">{project.year}</span>
                       </div>
                     </div>
 
-                    <p className="text-sm text-slate-400 leading-relaxed mt-auto border-t border-white/5 pt-6">
+                    <p className="text-sm text-slate-600 leading-relaxed mt-auto border-t border-slate-100 pt-6">
                       {project.description}
                     </p>
                   </div>

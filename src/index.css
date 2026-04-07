@@ -13,25 +13,25 @@
 
   /* Custom Industrial Tokens */
   --shadow-premium: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
-  --border-industrial: 1px solid rgba(255, 255, 255, 0.1);
+  --border-industrial: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 @layer base {
   body {
     font-family: var(--font-display);
-    @apply bg-background-dark text-slate-100 antialiased selection:bg-primary/30;
+    @apply bg-slate-50 text-slate-900 antialiased selection:bg-primary/30;
     font-feature-settings: "cv02", "cv03", "cv04", "cv11";
   }
 }
 
 @layer components {
   .industrial-grid {
-    background-image: radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.05) 1px, transparent 0);
+    background-image: radial-gradient(circle at 1px 1px, rgba(0, 0, 0, 0.08) 1px, transparent 0);
     background-size: 24px 24px;
   }
 
   .industrial-border {
-    @apply border border-white/10 bg-white/5 backdrop-blur-md shadow-2xl;
+    @apply border border-slate-200 bg-white/80 backdrop-blur-md shadow-2xl;
   }
 
   .section-anchor {
@@ -49,7 +49,7 @@
 }
 
 .bg-industrial-gradient {
-  background: linear-gradient(135deg, #0f172a 0%, #101622 100%);
+  background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
 }
 
 .grid-bg {
