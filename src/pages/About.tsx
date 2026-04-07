@@ -24,7 +24,7 @@ export default function About() {
             >
               <span className="text-[10px] font-bold tracking-[0.5em] uppercase text-primary mb-6 block">Nuestra Trayectoria</span>
               <h1 className="text-4xl sm:text-6xl md:text-8xl font-black text-slate-900 tracking-tighter leading-none mb-8">
-                Legado de <br /> <span className="text-slate-500">Precisión</span>
+                Legado de <br /> <span className="text-primary">Precisión</span>
               </h1>
               <p className="text-lg md:text-xl text-slate-600 leading-relaxed mb-10 max-w-xl">
                 CIS CONTROL, C.A. representa la evolución de Control Integral MM, C.A. Llevamos adelante décadas de maestría técnica mientras definimos el futuro de la ingeniería industrial.
@@ -74,7 +74,7 @@ export default function About() {
               <span className="text-[10px] font-bold tracking-[0.4em] uppercase text-primary mb-4 block">Propósito</span>
               <h2 className="text-3xl md:text-4xl font-black text-slate-900 mb-6 uppercase tracking-tighter">Misión</h2>
               <p className="text-slate-600 leading-relaxed text-base md:text-lg border-l-2 border-primary pl-6 md:pl-8">
-                "Proveer soluciones integrales de ingeniería, diseño, suministro y ejecución de proyectos en las áreas de electricidad, automatización, telecomunicaciones, protección de eventos atmosféricos y optimización en la producción de petróleo. Nos dedicamos a resolver los desafíos técnicos de nuestros clientes, mediante la aplicación de tecnología de vanguardia, el expertise de nuestros profesionales y el respaldo directo de nuestras alianzas estratégicas. Trabajamos día a día para garantizar la seguridad, eficiencia y continuidad operativa de las infraestructuras a nivel nacional."
+                "Proveer soluciones integrales de ingeniería, diseño, suministro y ejecución de proyectos en las áreas de electricidad, automatización, telecomunicaciones, protección de eventos atmosféricos y optimización en la producción de petróleo. Nos dedicamos a resolver los desafíos técnicos de nuestros clientes, mediante la aplicación de tecnología de vanguardia, el expertise de nuestros profesionales y el respaldo directo de nuestras alianzas estratégicas. Trabajamos día a día para garantizar la seguridad, eficiencia y continuity operativa de las infraestructuras a nivel nacional."
               </p>
             </motion.div>
 
@@ -101,7 +101,7 @@ export default function About() {
           <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 md:mb-20 gap-8">
             <div className="max-w-xl">
               <span className="text-[10px] font-bold tracking-[0.5em] uppercase text-primary mb-4 block">Nuestro ADN</span>
-              <h2 className="text-4xl md:text-5xl font-black text-slate-900 tracking-tighter leading-none">Valores <span className="text-slate-500">Fundamentales</span></h2>
+              <h2 className="text-4xl md:text-5xl font-black text-slate-900 tracking-tighter leading-none">Valores <span className="text-primary">Fundamentales</span></h2>
             </div>
           </div>
 

@@ -102,7 +102,7 @@ export default function Services() {
           >
             <span className="text-[10px] font-bold tracking-[0.5em] uppercase text-primary mb-6 block">Nuestras Soluciones</span>
             <h1 className="text-4xl sm:text-6xl md:text-8xl font-black text-slate-900 tracking-tighter leading-none mb-8">
-              Ingeniería de <br /> <span className="text-slate-500">Alto Rendimiento</span>
+              Ingeniería de <br /> <span className="text-primary">Alto Rendimiento</span>
             </h1>
             <p className="text-lg md:text-xl text-slate-600 max-w-2xl leading-relaxed">
               Transformamos desafíos industriales complejos en sistemas eficientes, seguros y tecnológicamente avanzados.
@@ -112,7 +112,7 @@ export default function Services() {
       </section>
 
       {/* Services List - Premium Grid */}
-      <section className="pb-32 bg-slate-50 pt-20">
+      <section className="py-20 md:py-32 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="space-y-24 md:space-y-40">
             {services.map((service, index) => (

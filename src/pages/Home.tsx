@@ -9,7 +9,7 @@ import heroImg from '../assets/Portada.jpg';
 
 export default function Home() {
   return (
-    <div className="overflow-x-hidden bg-slate-50 pb-20">
+    <div className="overflow-x-hidden bg-slate-50">
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center overflow-hidden">
         {/* Background Image */}
@@ -28,22 +28,22 @@ export default function Home() {
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-20">
-          <div className="max-w-3xl">
+          <div className="max-w-3xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-black text-slate-900 tracking-tighter leading-[0.85] mb-8 [text-shadow:_0_2px_10px_rgba(255,255,255,1)]">
+              <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-black text-slate-900 tracking-tighter leading-[0.85] mb-8 [text-shadow:_0_2px_10px_rgba(255,255,255,1)]">
                 Trayectoria sólida, <br />
-                <span className="text-slate-900">misión renovada</span>
+                <span className="text-primary">misión renovada</span>
               </h1>
 
-              <p className="text-base sm:text-lg md:text-xl text-slate-800 font-medium mb-10 max-w-xl leading-relaxed">
+              <p className="text-base sm:text-lg md:text-xl text-slate-800 font-medium mb-10 max-w-xl mx-auto leading-relaxed">
                 Como socios estratégicos, guiamos a la industria en su transición hacia sistemas de energía y automatización más eficientes y sostenibles.
               </p>
 
-              <div className="flex flex-col sm:flex-row gap-4 mb-16 md:mb-20">
+              <div className="flex flex-col sm:flex-row justify-center gap-4 mb-16 md:mb-20">
                 <Link
                   to="/services"
                   className="px-8 sm:px-10 py-4 bg-slate-900 text-white text-xs sm:text-sm font-bold uppercase tracking-widest hover:bg-primary transition-all duration-300 shadow-xl text-center"
@@ -73,14 +73,14 @@ export default function Home() {
       </section>
 
       {/* Services Grid */}
-      <section className="pt-20 pb-32 md:pt-32 md:pb-48 bg-slate-50 relative overflow-hidden" id="services">
+      <section className="pt-20 pb-20 md:pt-32 md:pb-32 bg-slate-50 relative overflow-hidden" id="services">
         <div className="absolute inset-0 industrial-grid opacity-30"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 md:mb-24 gap-8">
             <div className="max-w-2xl">
               <span className="text-[10px] font-bold tracking-[0.5em] uppercase text-primary mb-4 block">Nuestras Capacidades</span>
               <h2 className="text-4xl md:text-6xl font-black text-slate-900 tracking-tighter leading-none">
-                Soluciones de <br /> <span className="text-slate-500">Ingeniería Crítica</span>
+                Soluciones de <br /> <span className="text-primary">Ingeniería Crítica</span>
               </h2>
             </div>
             <Link to="/services" className="text-slate-900 text-xs font-bold tracking-widest uppercase border-b-2 border-primary pb-2 hover:text-primary transition-all">
