@@ -36,9 +36,9 @@ export default function Navbar() {
 
   const navBg = showSolidNav
     ? 'bg-white/95 backdrop-blur-lg shadow-md border-b border-slate-200 py-3'
-    : 'bg-transparent py-5';
+    : 'bg-black/20 backdrop-blur-md border-b border-white/10 py-4 shadow-2xl';
 
-  const logoTheme = 'dark'; // Always dark logo for light theme backdrops
+  const logoTheme = isHomePage && !scrolled ? 'light' : 'dark';
 
   return (
     <nav className={`fixed w-full z-50 transition-all duration-300 ${navBg}`}>
@@ -59,7 +59,7 @@ export default function Navbar() {
                 <Link
                   key={name}
                   to={path}
-                  className={`px-3 py-2 text-[13px] font-bold tracking-[0.1em] transition-all duration-300 hover:text-primary ${location.pathname === path ? 'text-primary' : (isHomePage && !scrolled ? 'text-slate-900' : 'text-slate-600')
+                  className={`px-3 py-2 text-[13px] font-bold tracking-[0.1em] transition-all duration-300 hover:text-primary ${location.pathname === path ? 'text-primary' : (isHomePage && !scrolled ? 'text-white' : 'text-slate-600')
                     }`}
                 >
                   {name}
@@ -77,7 +77,7 @@ export default function Navbar() {
           <div className="md:hidden flex items-center">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className={`${showSolidNav ? 'text-slate-600' : 'text-slate-900'} hover:text-primary transition-colors p-2`}
+              className={`${showSolidNav ? 'text-slate-600' : 'text-white'} hover:text-primary transition-colors p-2`}
             >
               {isOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
