@@ -12,19 +12,9 @@ export default function Footer() {
               <Logo theme="light" />
             </div>
             <p className="max-w-sm mb-6 leading-relaxed text-sm text-slate-400">
-              Firma de ingeniería evolucionando de Control Integral MM. Brindando soluciones de automatización, electricidad y telecomunicaciones de primer nivel por más de 20 años.
+              Firma de ingeniería evolucionando de Control Integral MM, C.A. Brindando soluciones de automatización, electricidad y telecomunicaciones de primer nivel por más de 20 años.
             </p>
-            <div className="flex gap-4">
-              <a href="#" className="w-10 h-10 rounded bg-slate-800 flex items-center justify-center hover:bg-primary hover:text-white transition-all text-white">
-                <span className="material-icons text-sm">facebook</span>
-              </a>
-              <a href="#" className="w-10 h-10 rounded bg-slate-800 flex items-center justify-center hover:bg-primary hover:text-white transition-all text-white">
-                <span className="material-icons text-sm">work</span>
-              </a>
-              <a href="mailto:contact@cis-control.com" className="w-10 h-10 rounded bg-slate-800 flex items-center justify-center hover:bg-primary hover:text-white transition-all text-white">
-                <span className="material-icons text-sm">email</span>
-              </a>
-            </div>
+            {/* Iconos eliminados como fue requerido */}
           </div>
 
           {/* Links */}
@@ -43,23 +33,20 @@ export default function Footer() {
             <h4 className="text-white font-bold uppercase text-sm tracking-widest mb-6 border-b border-primary w-fit pb-1">Contacto</h4>
             <ul className="space-y-4 text-sm mt-6">
               <li className="flex items-start gap-3">
-                <span className="material-icons text-primary text-base mt-0.5">location_on</span>
-                <span className="leading-tight">Zona Industrial<br />Valencia, Venezuela</span>
+                <span className="leading-tight">Dirección: Calle Tajalí D1-B, Urbanización Mar, Lechería, Estado Anzoátegui.</span>
               </li>
               <li className="flex items-center gap-3">
-                <span className="material-icons text-primary text-base">phone</span>
-                <span>+58 (212) 123-4567</span>
+                <span>Teléfono: +58 (412) 824-98-98</span>
               </li>
               <li className="flex items-center gap-3">
-                <span className="material-icons text-primary text-base">mail</span>
-                <span>contact@cis-control.com</span>
+                <span>Correo: info@ciscontrolmm.com</span>
               </li>
             </ul>
           </div>
         </div>
 
         <div className="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center text-xs">
-          <p>© 2023 CIS CONTROL. Todos los derechos reservados.</p>
+          <p>© 2023 CIS CONTROL, C.A. Todos los derechos reservados.</p>
           <div className="flex gap-6 mt-4 md:mt-0">
             <a href="#" className="hover:text-white transition-colors">Política de Privacidad</a>
             <a href="#" className="hover:text-white transition-colors">Términos de Servicio</a>

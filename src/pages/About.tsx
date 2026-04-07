@@ -1,13 +1,13 @@
 import { motion } from 'motion/react';
-import { Target, Eye, ShieldCheck, Cpu, Lightbulb, PenTool, Users, Award } from 'lucide-react';
+import { Target, Eye, ShieldCheck, Lightbulb, Users, Award } from 'lucide-react';
 import workspaceImg from '../assets/Nosotros.jpg';
 
 export default function About() {
   const values = [
-    { icon: <Lightbulb className="w-5 h-5" />, title: 'Innovación', desc: 'Buscamos siempre la tecnología más avanzada para resolver problemas antiguos.' },
-    { icon: <ShieldCheck className="w-5 h-5" />, title: 'Integridad', desc: 'Actuamos con honestidad y ética inquebrantable en cada contrato.' },
-    { icon: <Award className="w-5 h-5" />, title: 'Excelencia', desc: 'Calidad superior certificada en cada entrega y diseño técnico.' },
-    { icon: <Users className="w-5 h-5" />, title: 'Compromiso', desc: 'Dedicados al éxito a largo plazo de nuestros socios industriales.' }
+    { icon: <Award className="w-5 h-5" />, title: 'Trayectoria y Respaldo', desc: 'Construimos nuestro presente sobre una base sólida de conocimientos y proyectos ejecutados con éxito.' },
+    { icon: <Lightbulb className="w-5 h-5" />, title: 'Innovación Tecnológica', desc: 'Buscamos constantemente la integración de tecnologías de última generación, como los sistemas de DDCE y SPRC, para ofrecer soluciones superiores.' },
+    { icon: <ShieldCheck className="w-5 h-5" />, title: 'Calidad y Seguridad', desc: 'Nos apegamos a los más estrictos estándares técnicos en cada diseño, instalación y puesta en marcha.' },
+    { icon: <Users className="w-5 h-5" />, title: 'Alianzas Estratégicas', desc: 'Creemos en la sinergia con empresas líderes para multiplicar el valor que entregamos a nuestros clientes.' }
   ];
 
   return (
@@ -27,7 +27,7 @@ export default function About() {
                 Legado de <br /> <span className="text-slate-500">Precisión</span>
               </h1>
               <p className="text-lg md:text-xl text-slate-400 leading-relaxed mb-10 max-w-xl">
-                CIS CONTROL representa la evolución de Control Integral MM. Llevamos adelante décadas de maestría técnica mientras definimos el futuro de la ingeniería industrial.
+                CIS CONTROL, C.A. representa la evolución de Control Integral MM, C.A. Llevamos adelante décadas de maestría técnica mientras definimos el futuro de la ingeniería industrial.
               </p>
               <div className="flex items-center gap-6">
                 <div className="flex flex-col">
@@ -50,7 +50,7 @@ export default function About() {
             >
               <img
                 src={workspaceImg}
-                alt="Nuestro Equipo en CIS CONTROL"
+                alt="Nuestro Equipo en CIS CONTROL, C.A."
                 className="w-full h-auto transition-all duration-700"
                 loading="lazy"
               />
@@ -74,7 +74,7 @@ export default function About() {
               <span className="text-[10px] font-bold tracking-[0.4em] uppercase text-primary mb-4 block">Propósito</span>
               <h2 className="text-3xl md:text-4xl font-black text-white mb-6 uppercase tracking-tighter">Misión</h2>
               <p className="text-slate-400 leading-relaxed text-base md:text-lg border-l-2 border-primary pl-6 md:pl-8">
-                Proporcionar soluciones de ingeniería de clase mundial que maximicen la seguridad y eficiencia de la infraestructura industrial a través de innovación constante.
+                "Proveer soluciones integrales de ingeniería, diseño, suministro y ejecución de proyectos en las áreas de electricidad, automatización, telecomunicaciones, protección de eventos atmosféricos y optimización en la producción de petróleo. Nos dedicamos a resolver los desafíos técnicos de nuestros clientes, mediante la aplicación de tecnología de vanguardia, el expertise de nuestros profesionales y el respaldo directo de nuestras alianzas estratégicas. Trabajamos día a día para garantizar la seguridad, eficiencia y continuidad operativa de las infraestructuras a nivel nacional."
               </p>
             </motion.div>
 
@@ -88,7 +88,7 @@ export default function About() {
               <span className="text-[10px] font-bold tracking-[0.4em] uppercase text-primary mb-4 block">Destino</span>
               <h2 className="text-3xl md:text-4xl font-black text-white mb-6 uppercase tracking-tighter">Visión</h2>
               <p className="text-slate-400 leading-relaxed text-base md:text-lg border-l-2 border-primary pl-6 md:pl-8">
-                Ser el referente absoluto en automatización e ingeniería eléctrica crítica en la región, reconocidos por resolver lo que otros consideran imposible.
+                "Consolidarnos como la empresa líder y el socio estratégico referente en el sector de la ingeniería y tecnología en el país. Aspiramos a ser reconocidos por la excelencia en la ejecución de nuestros proyectos, la constante innovación de nuestro portafolio de servicios y la solidez de nuestras alianzas corporativas, impulsando el desarrollo de industrias más seguras, eficientes y conectadas con el futuro."
               </p>
             </motion.div>
           </div>

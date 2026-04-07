@@ -7,10 +7,9 @@ import autoImg from '../assets/automatizacion.png';
 import corrosionImg from '../assets/corrosion.png';
 import heroImg from '../assets/Portada.jpg';
 
-
 export default function Home() {
   return (
-    <div className="overflow-x-hidden">
+    <div className="overflow-x-hidden bg-background-dark pb-20">
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center overflow-hidden">
         {/* Background Image */}
@@ -36,8 +35,8 @@ export default function Home() {
               transition={{ duration: 0.8 }}
             >
               <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-black text-white tracking-tighter leading-[0.85] mb-8 [text-shadow:_0_4px_8px_rgba(0,0,0,0.5)]">
-                Ingeniería que <br />
-                <span className="text-white">Evoluciona</span>
+                Trayectoria sólida, <br />
+                <span className="text-white">misión renovada</span>
               </h1>
 
               <p className="text-base sm:text-lg md:text-xl text-white/90 font-medium mb-10 max-w-xl leading-relaxed [text-shadow:_0_2px_4px_rgba(0,0,0,0.8)]">
@@ -59,23 +58,6 @@ export default function Home() {
                 </Link>
               </div>
             </motion.div>
-
-            {/* In-hero Stats Section */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-              className="grid grid-cols-2 gap-6 md:gap-8 pt-10 md:pt-12 border-t border-white/10"
-            >
-              <div className="flex flex-col">
-                <span className="text-3xl md:text-4xl font-bold text-white mb-1">20+</span>
-                <span className="text-[10px] uppercase tracking-widest text-slate-400 font-semibold">Años de experiencia</span>
-              </div>
-              <div className="flex flex-col">
-                <span className="text-3xl md:text-4xl font-bold text-white mb-1">150+</span>
-                <span className="text-[10px] uppercase tracking-widest text-slate-400 font-semibold">Proyectos</span>
-              </div>
-            </motion.div>
           </div>
         </div>
 
@@ -88,13 +70,10 @@ export default function Home() {
             ></div>
           ))}
         </div>
-
-
       </section>
 
-
-      {/* Services Grid (Pilares) */}
-      <section className="py-20 md:py-32 bg-background-dark relative overflow-hidden" id="services">
+      {/* Services Grid (Pilares) - Ajustado el padding inferior tras remover secciones */}
+      <section className="pt-20 pb-32 md:pt-32 md:pb-48 bg-background-dark relative overflow-hidden" id="services">
         <div className="absolute inset-0 industrial-grid opacity-10"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 md:mb-24 gap-8">
@@ -142,15 +121,15 @@ export default function Home() {
               </div>
             </motion.div>
 
-            {/* Fibra - Square */}
+            {/* Red FTTH - Square */}
             <motion.div
               whileHover={{ y: -10 }}
               className="md:col-span-6 lg:col-span-4 group relative overflow-hidden bg-slate-800 aspect-square"
             >
-              <img src={fibraImg} alt="Fibra Comunicación" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-70 group-hover:opacity-100" loading="lazy" />
+              <img src={fibraImg} alt="Red FTTH" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-70 group-hover:opacity-100" loading="lazy" />
               <div className="absolute inset-0 bg-gradient-to-t from-background-dark via-background-dark/20 to-transparent"></div>
               <div className="absolute bottom-6 md:bottom-10 left-6 md:left-10 right-6 md:right-10">
-                <h3 className="text-xl md:text-2xl font-bold text-white mb-2">Comunicaciones Ópticas</h3>
+                <h3 className="text-xl md:text-2xl font-bold text-white mb-2">Red FTTH</h3>
                 <p className="text-slate-400 text-xs md:text-sm leading-relaxed mb-6">Infraestructura de red robusta para entornos industriales.</p>
                 <Link to="/services" className="inline-flex items-center gap-2 text-[10px] md:text-xs font-bold tracking-widest uppercase text-white hover:text-primary transition-colors">
                   Saber más <span className="w-6 md:w-8 h-[1px] bg-primary"></span>
@@ -189,66 +168,6 @@ export default function Home() {
                 </Link>
               </div>
             </motion.div>
-          </div>
-        </div>
-      </section>
-
-      {/* Trust in Numbers Section */}
-      <section className="py-24 bg-primary relative overflow-hidden">
-        {/* Abstract Pattern Background */}
-        <div className="absolute inset-0 opacity-10 pointer-events-none">
-          <div className="absolute top-0 left-0 w-64 h-64 bg-white rounded-full mix-blend-overlay filter blur-3xl translate-x-1/2 translate-y-1/2"></div>
-          <div className="absolute bottom-0 right-0 w-96 h-96 bg-black rounded-full mix-blend-overlay filter blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
-        </div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 text-center text-white max-w-4xl mx-auto">
-            <div className="p-6 rounded-lg bg-white/5 backdrop-blur border border-white/10 hover:bg-white/10 transition-colors">
-              <div className="text-5xl md:text-6xl font-extrabold mb-2">20+</div>
-              <div className="h-1 w-12 bg-white/50 mx-auto mb-4 rounded-full"></div>
-              <p className="text-lg font-medium text-blue-100 uppercase tracking-wide">Años de Experiencia</p>
-            </div>
-            <div className="p-6 rounded-lg bg-white/5 backdrop-blur border border-white/10 hover:bg-white/10 transition-colors">
-              <div className="text-5xl md:text-6xl font-extrabold mb-2">150+</div>
-              <div className="h-1 w-12 bg-white/50 mx-auto mb-4 rounded-full"></div>
-              <p className="text-lg font-medium text-blue-100 uppercase tracking-wide">Proyectos</p>
-            </div>
-          </div>
-          <div className="mt-16 text-center">
-            <p className="text-blue-100 text-lg mb-6 max-w-2xl mx-auto">
-              Con la confianza de líderes de la industria en los sectores de energía y manufactura. Entregamos precisión donde más importa.
-            </p>
-            {/* Logos row placeholder */}
-            <div className="flex flex-wrap justify-center gap-8 opacity-70 grayscale">
-              <span className="font-bold text-2xl text-white tracking-widest">PDVSA</span>
-              <span className="font-bold text-2xl text-white tracking-widest">CORPOELEC</span>
-              <span className="font-bold text-2xl text-white tracking-widest">SIEMENS</span>
-              <span className="font-bold text-2xl text-white tracking-widest">SCHNEIDER</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Newsletter */}
-      <section className="py-24 relative overflow-hidden bg-background-dark border-t border-white/5">
-        <div className="absolute inset-0 industrial-grid opacity-20"></div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="industrial-border p-12 md:p-16 rounded-[2rem] flex flex-col md:flex-row items-center justify-between gap-12">
-            <div className="max-w-xl">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4 tracking-tight text-white">Mantente a la Vanguardia</h2>
-              <p className="text-slate-300 text-lg">
-                Recibe las últimas noticias sobre automatización industrial, casos de éxito y actualizaciones técnicas directo en tu correo.
-              </p>
-            </div>
-            <form className="w-full md:w-auto flex flex-col sm:flex-row gap-4">
-              <input
-                type="email"
-                placeholder="tu@correo.com"
-                className="px-6 py-4 bg-white/5 border border-white/10 rounded-full focus:outline-none focus:ring-2 focus:ring-primary text-white min-w-[300px] backdrop-blur-sm"
-              />
-              <button className="btn-premium whitespace-nowrap">
-                Suscribirme
-              </button>
-            </form>
           </div>
         </div>
       </section>
