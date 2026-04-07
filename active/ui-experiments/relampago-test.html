@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experimento: Relámpago DDCE</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #050510; /* Azul muy oscuro, ambiente eléctrico nocturno */
+            overflow: hidden;
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+        }
+        canvas {
+            display: block;
+            width: 100%;
+            height: 100%;
+            /* Filtros adicionales pueden afectar severamente el rendimiento,
+               así que controlamos el resplandor preferiblemente en el canvas */
+        }
+        .hero-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: rgba(255, 255, 255, 0.9);
+            text-align: center;
+            z-index: 10;
+            pointer-events: none;
+        }
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 0.5rem;
+            text-shadow: 0 0 20px rgba(0, 150, 255, 0.6);
+            letter-spacing: 2px;
+            font-weight: 800;
+        }
+        p {
+            font-size: 1.2rem;
+            opacity: 0.8;
+            font-weight: 300;
+        }
+    </style>
+</head>
+<body>
+    <div class="hero-content">
+        <h1>SISTEMA DDCE</h1>
+        <p>Desionizador de Cargas Electromagnéticas</p>
+    </div>
+    
+    <canvas id="lightningCanvas"></canvas>
+
+    <script>
+        /**
+         * Experimento 01: Relámpago procedural, expansión lenta.
+         * Generado para la Sección 2 (Slider 1) - Temática: Electromagnética
+         */
+        const canvas = document.getElementById('lightningCanvas');
+        const ctx = canvas.getContext('2d');
+        
+        let width, height;
+        let lightningNodes = [];
+        
+        // Colores del efecto
+        const LIGHTNING_COLOR = 'rgba(136, 204, 255, 1)';
+        const GLOW_COLOR = 'rgba(0, 102, 255, 0.8)';
+        
+        // Parámetros de expansión lenta
+        const BRANCH_PROBABILITY = 0.04;
+        const SPEED = 2.5; // Expansión lenta simulada por frame
+
+        function resize() {
+            width = canvas.width = window.innerWidth;
+            height = canvas.height = window.innerHeight;
+        }
+        
+        window.addEventListener('resize', resize);
+        resize();
+
+        class LightningNode {
+            constructor(x, y, dx, dy, thickness, generation) {
+                this.x = x;
+                this.y = y;
+                this.dx = dx;
+                this.dy = dy;
+                this.thickness = thickness;
+                this.generation = generation;
+                this.history = [{x, y}];
+                this.age = 0;
+                this.maxAge = 120 + Math.random() * 80;
+                this.isDead = false;
+                this.alpha = 1;
+            }
+
+            update() {
+                if (this.isDead) return;
+                
+                // Variación de dirección en cada frame para buscar caminos eléctricos
+                const chaos = (6 - this.generation) * 1.8;
+                this.dx += (Math.random() - 0.5) * chaos;
+                this.dy += (Math.random() - 0.1) * chaos; // Tendencia de ir hacia abajo
+                
+                // Normalizar velocidad
+                const vectorLength = Math.sqrt(this.dx * this.dx + this.dy * this.dy);
+                if (vectorLength > 0) {
+                    this.dx = (this.dx / vectorLength) * SPEED;
+                    this.dy = (this.dy / vectorLength) * SPEED;
+                }
+                
+                this.x += this.dx;
+                this.y += this.dy;
+                this.history.push({x: this.x, y: this.y});
+                
+                this.age++;
+                
+                // Generar ramificaciones si hay posibilidad y no estamos en generaciones profundas
+                if (Math.random() < BRANCH_PROBABILITY && this.generation < 5 && this.age < this.maxAge * 0.7) {
+                    const angle = Math.atan2(this.dy, this.dx) + (Math.random() > 0.5 ? 1 : -1) * (Math.random() * 0.6 + 0.3);
+                    const newDx = Math.cos(angle);
+                    const newDy = Math.sin(angle);
+                    lightningNodes.push(new LightningNode(this.x, this.y, newDx, newDy, this.thickness * 0.65, this.generation + 1));
+                }
+                
+                // Muerte de la partícula / nodo
+                if (this.age > this.maxAge || this.y > height + 200 || this.x < -200 || this.x > width + 200) {
+                    this.isDead = true;
+                }
+            }
+
+            draw(ctx) {
+                if (this.history.length < 2) return;
+                
+                if (this.isDead) {
+                    // Desvanecimiento suave post-impacto
+                    this.alpha -= 0.015;
+                }
+                
+                if (this.alpha <= 0.05) return;
+
+                ctx.beginPath();
+                ctx.moveTo(this.history[0].x, this.history[0].y);
+                for (let i = 1; i < this.history.length; i++) {
+                    ctx.lineTo(this.history[i].x, this.history[i].y);
+                }
+                
+                // Efecto de resplandor
+                ctx.shadowBlur = 10 + (this.thickness * 2);
+                ctx.shadowColor = GLOW_COLOR;
+                ctx.strokeStyle = `rgba(136, 204, 255, ${this.alpha})`;
+                ctx.lineWidth = this.thickness;
+                ctx.lineCap = 'round';
+                ctx.lineJoin = 'round';
+                ctx.stroke();
+                
+                // Núcleo central blanco/brillante
+                ctx.shadowBlur = 0;
+                ctx.strokeStyle = `rgba(255, 255, 255, ${this.alpha})`;
+                ctx.lineWidth = this.thickness * 0.4;
+                ctx.stroke();
+            }
+        }
+
+        let flashOpacity = 0;
+
+        function animate() {
+            // Efecto motion blur limpio en cada frame, sin oscurecer de inmediato
+            ctx.fillStyle = `rgba(5, 5, 16, 0.4)`; 
+            ctx.fillRect(0, 0, width, height);
+
+            // Flash de iluminación ambiental simulando un trueno en el cielo
+            if (flashOpacity > 0) {
+                ctx.fillStyle = `rgba(136, 204, 255, ${flashOpacity})`;
+                ctx.fillRect(0, 0, width, height);
+                flashOpacity -= 0.04;
+            }
+
+            let activeBranches = 0;
+            
+            for (let i = lightningNodes.length - 1; i >= 0; i--) {
+                const node = lightningNodes[i];
+                node.update();
+                node.draw(ctx);
+                
+                if (!node.isDead) {
+                    activeBranches++;
+                }
+                
+                if (node.alpha <= 0.05) {
+                    lightningNodes.splice(i, 1);
+                }
+            }
+
+            // Reproducir un nuevo rayo después de uno anterior con probabilidad esporádica
+            if (activeBranches === 0 && Math.random() < 0.008) {
+                startLightning();
+            }
+
+            requestAnimationFrame(animate);
+        }
+
+        function startLightning() {
+            lightningNodes = [];
+            flashOpacity = 0.25; 
+            const startX = width * (0.2 + Math.random() * 0.6);
+            // El grosor inicial de la raíz del rayo
+            lightningNodes.push(new LightningNode(startX, -10, 0, 1, 6, 0));
+        }
+
+        // Simular que se dispara justamente al abrir la página y se expande lentamente.
+        // Un pequeño timeout para asegurar que renderizó la capa base antes del flash
+        setTimeout(() => {
+            startLightning();
+            animate();
+        }, 300);
+
+    </script>
+</body>
+</html>
